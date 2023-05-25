@@ -29,10 +29,9 @@ const ProfileHome = () => {
 export default ProfileHome;
 
 const ListContainer = ({ num }) => {
-  console.log(num);
   return (
     <li>
-      <Link to="/project">
+      <Link to="/profile">
         <div>{num}</div>
       </Link>
     </li>
