@@ -35,7 +35,6 @@ const ProjectHome = () => {
 export default ProjectHome;
 
 const ListContainer = ({ num }) => {
-  console.log(num);
   return (
     <li>
       <Link to="/project">

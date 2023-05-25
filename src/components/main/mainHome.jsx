@@ -6,7 +6,7 @@ const MainHome = () => {
     <>
       <MainHomeStyle>
         <div className="home-con">
-          <img src="/assets/image/main_1.png" alt="" />
+          <img src="/assets/image/main_3.png" alt="" />
         </div>
         <div className="text-wrap">
           <p>Digital Contents Design 24Graduation Exhibition</p>
@@ -52,13 +52,16 @@ const MainHomeStyle = styled.section`
     justify-content: center;
     align-items: center;
     img {
-      width: 80%;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
     }
   }
   .text-wrap {
     position: absolute;
     bottom: 30px;
     left: 150px;
+    z-index: 2;
     p {
       font-size: 20px;
       font-weight: 700;
