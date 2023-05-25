@@ -37,7 +37,7 @@ const MainNavStyle = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 150px;
-
+  z-index: 99999;
   .nav-left {
     position: relative;
     h1 {

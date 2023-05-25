@@ -3,6 +3,7 @@ import MainNav from "./mainNav";
 // import MainHome from "../components/main/mainHome";
 import { useRoutes } from "react-router-dom";
 import { routerList } from "../routers/routerlist";
+import MainFooter from "./mainfooter";
 
 function App() {
   const routers = useRoutes(routerList);
@@ -10,6 +11,7 @@ function App() {
     <>
       <MainNav />
       {routers}
+      <MainFooter />
     </>
   );
 }
