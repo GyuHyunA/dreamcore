@@ -6,19 +6,19 @@ const MainNav = () => {
   return (
     <MainNavStyle>
       <div className="nav-left">
-        <Link>
+        <Link to="/">
           <h1>DREAMCORE</h1>
         </Link>
       </div>
       <ul className="nav-right">
         <li className="link">
-          <Link to="">About</Link>
+          <Link to="about">About</Link>
         </li>
         <li className="link">
-          <Link to="">Project</Link>
+          <Link to="project">Project</Link>
         </li>
         <li className="link">
-          <Link to="">Profile</Link>
+          <Link to="profile">Profile</Link>
         </li>
       </ul>
     </MainNavStyle>
