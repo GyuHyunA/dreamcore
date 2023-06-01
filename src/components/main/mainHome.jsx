@@ -6,7 +6,8 @@ const MainHome = () => {
     <>
       <MainHomeStyle>
         <div className="home-con">
-          <img src="/assets/image/main_3.png" alt="" />
+          <video src="/assets/video/ma_vi1.mp4" muted autoPlay loop></video>
+          {/* <img src="/assets/image/main_3.png" alt="" /> */}
         </div>
         <div className="text-wrap">
           <p>Digital Contents Design 24Graduation Exhibition</p>
@@ -21,8 +22,10 @@ const MainHome = () => {
           {/* <img src="" alt="" className="poster_img" /> */}
           <div className="poster_text">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut eligendi voluptates quam minus earum quis temporibus non consectetur ullam, iure dolor quasi velit, corrupti tempore
-              amet fuga eaque itaque?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+              ut eligendi voluptates quam minus earum quis temporibus non
+              consectetur ullam, iure dolor quasi velit, corrupti tempore amet
+              fuga eaque itaque?
             </p>
           </div>
         </div>
@@ -32,7 +35,15 @@ const MainHome = () => {
           <h1>Trailer</h1>
         </div>
         <div class="trailer-box">
-          <embed src="https://www.youtube.com/embed/7MteKIFrxd4" />
+          {/* <embed src="https://www.youtube.com/embed/7MteKIFrxd4?autoplay=1" /> */}
+          {/* <video src="https://www.youtube.com/watch?v=7MteKIFrxd4"></video> */}
+          <iframe
+            src="https://www.youtube.com/embed/L6MZDx02D9I?autoplay=1&mute=1"
+            title="Video-Poster"
+            frameborder="0"
+            allow="fullscreen; autoplay;"
+          ></iframe>
+          <p>▶︎사운드가 있는 영상입니다</p>
         </div>
       </MainTrailerStyle>
     </>
@@ -47,14 +58,18 @@ const MainHomeStyle = styled.section`
   .home-con {
     position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 100vh;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    img {
-      position: absolute;
+    align-items: center; */
+    overflow: hidden;
+    video {
+      position: relative;
       width: 100%;
+      height: 100%;
       z-index: 1;
+      object-fit: cover;
+      object-position: center;
     }
   }
   .text-wrap {
@@ -120,10 +135,13 @@ const MainTrailerStyle = styled.section`
   .trailer-box {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
-  .trailer-box embed {
+  .trailer-box iframe {
     width: 960px;
     height: 540px;
+    margin-bottom: 10px;
   }
 `;
