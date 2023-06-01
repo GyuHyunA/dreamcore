@@ -13,7 +13,7 @@ const MainFooter = () => {
         <span>Location : </span>
         <a href="https://naver.me/GRz9ZQGm">울산 남구 대학로 93, 28호관 3층</a>
       </p>
-      <p>Copyright 2023. dcd24 Graduation Team All rights reserved.</p>
+      <p>Copyright 2023. DCD24 Graduation Team All rights reserved.</p>
     </MainFooterStyle>
   );
 };

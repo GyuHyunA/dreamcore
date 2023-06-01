@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const AboutHome = () => {
@@ -13,11 +14,21 @@ const AboutHome = () => {
       <AboutProStyle>
         <h2>Project Guidance Professor</h2>
         <div className="professor-wrap">
-          <div className="professor-box"></div>
-          <div className="professor-box"></div>
-          <div className="professor-box"></div>
-          <div className="professor-box"></div>
-          <div className="professor-box"></div>
+          <Link>
+            <div className="professor-box"></div>
+          </Link>
+          <Link>
+            <div className="professor-box"></div>
+          </Link>
+          <Link>
+            <div className="professor-box"></div>
+          </Link>
+          <Link>
+            <div className="professor-box"></div>
+          </Link>
+          <Link>
+            <div className="professor-box"></div>
+          </Link>
         </div>
       </AboutProStyle>
     </>
@@ -38,11 +49,11 @@ const AboutHomeStyle = styled.section`
     margin-bottom: 10px;
   }
   h2 {
-    font-size: 24px;
-    margin-bottom: 130px;
+    font-size: 18px;
+    margin-bottom: 50px;
   }
   p {
-    font-size: 18px;
+    font-size: 12px;
   }
 `;
 

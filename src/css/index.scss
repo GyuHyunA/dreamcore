@@ -1,9 +1,30 @@
+@font-face {
+  font-family: "Pretendard-exb";
+  src: url("./font/Pretendard-ExtraBold.otf");
+}
+@font-face {
+  font-family: "Pretendard-b";
+  src: url("./font/Pretendard-Bold.otf");
+}
+@font-face {
+  font-family: "Pretendard-r";
+  src: url("./font/Pretendard-Regular.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Pretendard-r";
+}
 a {
   text-decoration: none;
   color: black;
+}
+h1,
+h2,
+h3 {
+  font-family: "Pretendard-b";
 }
