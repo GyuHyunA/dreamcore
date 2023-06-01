@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dreamcore/static/css/main.2e571e8f.css",
-    "main.js": "/dreamcore/static/js/main.997a9f04.js",
+    "main.js": "/dreamcore/static/js/main.cf23a389.js",
     "index.html": "/dreamcore/index.html",
     "main.2e571e8f.css.map": "/dreamcore/static/css/main.2e571e8f.css.map",
-    "main.997a9f04.js.map": "/dreamcore/static/js/main.997a9f04.js.map"
+    "main.cf23a389.js.map": "/dreamcore/static/js/main.cf23a389.js.map"
   },
   "entrypoints": [
     "static/css/main.2e571e8f.css",
-    "static/js/main.997a9f04.js"
+    "static/js/main.cf23a389.js"
   ]
 }
