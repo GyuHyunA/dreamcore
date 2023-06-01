@@ -41,7 +41,8 @@ const MainNavStyle = styled.nav`
   .nav-left {
     position: relative;
     h1 {
-      font-size: 28px;
+      font-family: "Pretendard-b";
+      font-size: 22px;
       font-weight: 700;
     }
   }
@@ -55,6 +56,9 @@ const MainNavStyle = styled.nav`
       margin-left: 82px;
       &:nth-child(1) {
         margin: 0;
+      }
+      a{
+        font-size: 16px;
       }
     }
   }

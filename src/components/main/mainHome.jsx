@@ -5,12 +5,22 @@ const MainHome = () => {
   return (
     <>
       <MainHomeStyle>
-        <div className="home-con">
-          <video src="/assets/video/ma_vi1.mp4" muted autoPlay loop></video>
-          {/* <img src="/assets/image/main_3.png" alt="" /> */}
+        <div className="text-wrap tw-up">
+          <p className="main-text">Digital Contents Design 24Graduation Exhibition</p>
+          <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
         </div>
-        <div className="text-wrap">
-          <p>Digital Contents Design 24Graduation Exhibition</p>
+        <div className="home-con">
+          <video src="https://rcsvr.myds.me/agh/ma_vi1.mp4" muted autoPlay loop></video>
+        </div>
+        <div className="text-wrap tw-down">
+          <div className="date">
+            <p>10.31 -</p>
+            <p>11.06</p>
+          </div>
+          <div className="time">
+            <p>OPEN. 5PM - 6PM Mon</p>
+            <p>9AM - 5PM Tue - Fri</p>
+          </div>
         </div>
       </MainHomeStyle>
       <MainPosterStyle>
@@ -22,10 +32,8 @@ const MainHome = () => {
           {/* <img src="" alt="" className="poster_img" /> */}
           <div className="poster_text">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-              ut eligendi voluptates quam minus earum quis temporibus non
-              consectetur ullam, iure dolor quasi velit, corrupti tempore amet
-              fuga eaque itaque?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut eligendi voluptates quam minus earum quis temporibus non
+              consectetur ullam, iure dolor quasi velit, corrupti tempore amet fuga eaque itaque?
             </p>
           </div>
         </div>
@@ -59,9 +67,6 @@ const MainHomeStyle = styled.section`
     position: relative;
     width: 100%;
     height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     overflow: hidden;
     video {
       position: relative;
@@ -74,12 +79,40 @@ const MainHomeStyle = styled.section`
   }
   .text-wrap {
     position: absolute;
-    bottom: 30px;
-    left: 150px;
     z-index: 2;
-    p {
-      font-size: 20px;
+    font-family: "Pretendard-b";
+    &.tw-up {
+      top: 70px;
+      left: 150px;
+      color: #3b3b3b;
+    }
+    &.tw-down {
+      bottom: 60px;
+      left: 150px;
+      color: #3b3b3b;
+    }
+
+    .main-text {
+      font-size: 32px;
       font-weight: 700;
+    }
+    .main-subtext {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .date {
+      position: relative;
+      font-size: 50px;
+      font-weight: 700;
+    }
+    .time {
+      position: relative;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      p:nth-child(1) {
+        margin-right: 20px;
+      }
     }
   }
 `;
