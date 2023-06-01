@@ -163,7 +163,7 @@ const MainTrailerStyle = styled.section`
   h1 {
     text-align: center;
     font-size: 28px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
   }
   .trailer-box {
     width: 100%;
