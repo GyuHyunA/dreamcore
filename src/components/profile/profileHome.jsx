@@ -47,7 +47,7 @@ const ProfileHomeStyle = styled.section`
   padding-bottom: 100px;
   h2 {
     padding-top: 100px;
-    font-size: 40px;
+    font-size: 28px;
     margin-bottom: 50px;
     text-align: center;
   }
