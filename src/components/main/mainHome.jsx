@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
 const MainHome = () => {
+  const [position, setPosition] = useState(0);
+  const [toCla, setTocla] = useState(false);
+
+  function onScroll() {
+    setPosition(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    if (position > window.innerHeight - 400) {
+      setTocla(true);
+      console.log(toCla);
+    }
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if(position < 300){
+        setTocla(false)
+      }
+    };
+  }, [position, toCla]);
+
+  // console.log(window.innerHeight*1);
+
   return (
     <>
       <MainHomeStyle>
@@ -24,13 +47,15 @@ const MainHome = () => {
         </div>
       </MainHomeStyle>
       <MainPosterStyle>
-        <div className="title-wrap">
-          <h1 className="title">DREAMCORE</h1>
+        <div className={`title-wrap`}>
+          <h1 className="title">
+            DREAMCORE
+          </h1>
         </div>
-        <div className="poster-wrap">
-          <div className="testimg"></div>
+        <div className={`poster-wrap`}>
+          <div className={`testimg ${toCla ? "ia" : " "}`}></div>
           {/* <img src="" alt="" className="poster_img" /> */}
-          <div className="poster_text">
+          <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut eligendi voluptates quam minus earum quis temporibus non
               consectetur ullam, iure dolor quasi velit, corrupti tempore amet fuga eaque itaque?
@@ -38,22 +63,6 @@ const MainHome = () => {
           </div>
         </div>
       </MainPosterStyle>
-      <MainTrailerStyle>
-        <div className="title-wrap">
-          <h1>Trailer</h1>
-        </div>
-        <div class="trailer-box">
-          {/* <embed src="https://www.youtube.com/embed/7MteKIFrxd4?autoplay=1" /> */}
-          {/* <video src="https://www.youtube.com/watch?v=7MteKIFrxd4"></video> */}
-          <iframe
-            src="https://www.youtube.com/embed/L6MZDx02D9I?autoplay=1&mute=1"
-            title="Video-Poster"
-            frameborder="0"
-            allow="fullscreen; autoplay;"
-          ></iframe>
-          <p>▶︎사운드가 있는 영상입니다</p>
-        </div>
-      </MainTrailerStyle>
     </>
   );
 };
@@ -93,21 +102,21 @@ const MainHomeStyle = styled.section`
     }
 
     .main-text {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 700;
     }
     .main-subtext {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
     }
     .date {
       position: relative;
-      font-size: 50px;
+      font-size: 38px;
       font-weight: 700;
     }
     .time {
       position: relative;
-      font-size: 24px;
+      font-size: 20px;
       display: flex;
       align-items: center;
       p:nth-child(1) {
@@ -137,44 +146,60 @@ const MainPosterStyle = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 210px;
+    margin: 100px 0;
+    opacity: 1;
+    /* padding: 0 210px; */
     .testimg {
       width: 450px;
       height: 650px;
       background-color: lightgray;
-      margin-right: 30px;
+      /* margin-right: 30px; */
+      transform: translateX(225px);
+      opacity: 0;
+    }
+    .ia {
+      opacity: 1;
+      transform: translateX(-30px);
+      transition: 1s;
     }
     .poster_text {
       width: 450px;
       height: 650px;
       display: inline-flex;
       align-items: center;
+      transform: translateX(-225px);
+      opacity: 0;
+    }
+    .ta {
+      opacity: 1;
+      transform: translateX(30px);
+      transition: 1s;
     }
   }
 `;
 
-const MainTrailerStyle = styled.section`
-  width: 100vw;
-  height: 100vh;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 80px;
-  }
-  .trailer-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .trailer-box iframe {
-    width: 960px;
-    height: 540px;
-    margin-bottom: 10px;
-  }
-`;
+// const MainTrailerStyle = styled.section`
+//   width: 100vw;
+//   height: 100vh;
+//   padding-top: 100px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   h1 {
+//     text-align: center;
+//     font-size: 28px;
+//     margin-bottom: 80px;
+//   }
+//   .trailer-box {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .trailer-box iframe {
+//     width: 960px;
+//     height: 540px;
+//     margin-bottom: 10px;
+//   }
+// `;
