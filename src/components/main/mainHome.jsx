@@ -38,13 +38,12 @@ const MainHome = () => {
           </div>
         </div>
       </MainPosterStyle>
-      <MainTrailerStyle>
+      {/* 영상 관련 */}
+      {/* <MainTrailerStyle>
         <div className="title-wrap">
           <h1>Trailer</h1>
         </div>
         <div class="trailer-box">
-          {/* <embed src="https://www.youtube.com/embed/7MteKIFrxd4?autoplay=1" /> */}
-          {/* <video src="https://www.youtube.com/watch?v=7MteKIFrxd4"></video> */}
           <iframe
             src="https://www.youtube.com/embed/L6MZDx02D9I?autoplay=1&mute=1"
             title="Video-Poster"
@@ -53,7 +52,7 @@ const MainHome = () => {
           ></iframe>
           <p>▶︎사운드가 있는 영상입니다</p>
         </div>
-      </MainTrailerStyle>
+      </MainTrailerStyle> */}
     </>
   );
 };
@@ -153,28 +152,28 @@ const MainPosterStyle = styled.section`
   }
 `;
 
-const MainTrailerStyle = styled.section`
-  width: 100vw;
-  height: 100vh;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 80px;
-  }
-  .trailer-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .trailer-box iframe {
-    width: 960px;
-    height: 540px;
-    margin-bottom: 10px;
-  }
-`;
+// const MainTrailerStyle = styled.section`
+//   width: 100vw;
+//   height: 100vh;
+//   padding-top: 100px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   h1 {
+//     text-align: center;
+//     font-size: 28px;
+//     margin-bottom: 80px;
+//   }
+//   .trailer-box {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .trailer-box iframe {
+//     width: 960px;
+//     height: 540px;
+//     margin-bottom: 10px;
+//   }
+// `;

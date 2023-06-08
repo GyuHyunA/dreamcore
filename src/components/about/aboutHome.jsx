@@ -70,18 +70,23 @@ const AboutProStyle = styled.section`
   }
   .professor-wrap {
     width: 100%;
-    padding: 0 230px;
+    /* padding: 0 230px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     .professor-box {
       width: 250px;
       height: 300px;
-      /* margin-bottom: 50px; */
-      background-color: lightgray;
+      margin-right: 30px;
       border-radius: 10px;
+      border: 1px solid black;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
       &:hover {
-        transition: 0.5s;
+        background-color: #00000025;
+        /* border: none; */
+        transition: 1s;
       }
     }
   }
