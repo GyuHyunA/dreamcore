@@ -3,6 +3,7 @@ import MainHome from "../components/main/mainHome";
 import ProfileHome from "../components/profile/profileHome";
 import ProjectHome from "../components/project/projectHome";
 import ErrorPage from "../pages/errorpage";
+import ReadyPage from "../pages/readypage";
 
 export const routerList = [
   {
@@ -12,6 +13,10 @@ export const routerList = [
   {
     path: "*",
     element: <ErrorPage />,
+  },
+  {
+    path: "ready",
+    element: <ReadyPage />,
   },
   {
     path: "about",

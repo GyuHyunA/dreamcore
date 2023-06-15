@@ -24,7 +24,7 @@ const ProjectHome = () => {
         </ul>
         <ContentsListStyle>
           {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} />;
+            return <ListContainer num={v.id} key={v.id} link={v.link} />;
           })}
         </ContentsListStyle>
       </ProjectHomeStyle>
@@ -34,10 +34,10 @@ const ProjectHome = () => {
 
 export default ProjectHome;
 
-const ListContainer = ({ num }) => {
+const ListContainer = ({ num, link }) => {
   return (
     <li>
-      <Link to="/project">
+      <Link to={`/${link}`}>
         <div>{num}</div>
       </Link>
     </li>

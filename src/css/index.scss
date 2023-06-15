@@ -28,3 +28,14 @@ h2,
 h3 {
   font-family: "Pretendard-b";
 }
+
+//ant
+.ant-image-preview-operations-wrapper {
+  .ant-image-preview-operations {
+    display: none;
+  }
+}
+
+.ant-image-preview-mask {
+  background-color: rgba(0, 0, 0, 0.8)!important;
+}

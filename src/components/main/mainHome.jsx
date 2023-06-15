@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
+import { Image } from "antd";
 
 const MainHome = () => {
   const [position, setPosition] = useState(0);
@@ -21,7 +22,6 @@ const MainHome = () => {
       }
     };
   }, [position, toCla]);
-
 
   return (
     <>
@@ -49,8 +49,12 @@ const MainHome = () => {
           <h1 className="title">DREAMCORE</h1>
         </div>
         <div className={`poster-wrap`}>
-          <div className={`poster_img ${toCla ? "ia" : " "}`}></div>
-          {/* <img src="" alt="" className="poster_img" /> */}
+          {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
+          <Image
+            src="https://wallpapers.com/images/high/dreamcore-lawn-4k1znkbio0xilnw6.webp"
+            alt=""
+            className={`poster_img ${toCla ? "ia" : " "}`}
+          />
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut eligendi voluptates quam minus earum quis temporibus non
@@ -120,6 +124,37 @@ const MainHomeStyle = styled.section`
       }
     }
   }
+  @media screen and (max-width: 1280px) {
+    .home-con {
+      width: 100%;
+      video {
+        width: 100vw;
+        object-fit: cover;
+      }
+    }
+    .text-wrap {
+      &.tw-up {
+        left: 70px;
+        color: #3b3b3b;
+      }
+      &.tw-down {
+        left: 70px;
+        color: #3b3b3b;
+      }
+      .main-text {
+        font-size: 20px;
+      }
+      .main-subtext {
+        font-size: 16px;
+      }
+      .date {
+        font-size: 30px;
+      }
+      .time {
+        font-size: 12px;
+      }
+    }
+  }
 `;
 
 const MainPosterStyle = styled.section`
@@ -148,11 +183,18 @@ const MainPosterStyle = styled.section`
     .poster_img {
       width: 450px;
       height: 650px;
-      background-color: lightgray;
+      /* background-color: lightgray; */
       /* margin-right: 30px; */
       transform: translateX(225px);
       opacity: 0;
       z-index: 3;
+    }
+    .ant-image-mask {
+      transform: translateX(-30px);
+      background: rgba(0, 0, 0, 0);
+      .ant-image-mask-info{
+        display: none;
+      }
     }
     .ia {
       opacity: 1;
@@ -172,6 +214,18 @@ const MainPosterStyle = styled.section`
       transform: translateX(30px);
       transition: 1s;
       transition-delay: 1s;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .poster-wrap {
+      .poster_img {
+        width: calc(450px / 2);
+        height: calc(650px / 2);
+      }
+      .poster_text {
+        width: calc(450px / 2);
+        height: calc(650px / 2);
+      }
     }
   }
 `;

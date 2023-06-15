@@ -57,9 +57,12 @@ const MainNavStyle = styled.nav`
       &:nth-child(1) {
         margin: 0;
       }
-      a{
+      a {
         font-size: 16px;
       }
     }
+  }
+  @media screen and (max-width: 1280px) {
+    padding: 0 70px;
   }
 `;

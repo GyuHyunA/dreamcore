@@ -18,7 +18,7 @@ const ProfileHome = () => {
         </ul>
         <ContentsListStyle>
           {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} />;
+            return <ListContainer num={v.id} link={v.link} key={v.id} />;
           })}
         </ContentsListStyle>
       </ProfileHomeStyle>
@@ -28,10 +28,10 @@ const ProfileHome = () => {
 
 export default ProfileHome;
 
-const ListContainer = ({ num }) => {
+const ListContainer = ({ num, link }) => {
   return (
     <li>
-      <Link to="/profile">
+      <Link to={`/${link}`}>
         <div>{num}</div>
       </Link>
     </li>
