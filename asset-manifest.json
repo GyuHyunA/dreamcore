@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dreamcore/static/css/main.8f2d6af2.css",
-    "main.js": "/dreamcore/static/js/main.d5e48b19.js",
+    "main.css": "/dreamcore/static/css/main.6940b309.css",
+    "main.js": "/dreamcore/static/js/main.ae68bc6b.js",
     "static/media/Pretendard-Bold.otf": "/dreamcore/static/media/Pretendard-Bold.3ec32cdae5bc0c0026a6.otf",
     "static/media/Pretendard-Regular.otf": "/dreamcore/static/media/Pretendard-Regular.de88013f2ea98a04dede.otf",
     "static/media/Pretendard-ExtraBold.otf": "/dreamcore/static/media/Pretendard-ExtraBold.6a8d330cb367af8c7a57.otf",
     "index.html": "/dreamcore/index.html",
-    "main.8f2d6af2.css.map": "/dreamcore/static/css/main.8f2d6af2.css.map",
-    "main.d5e48b19.js.map": "/dreamcore/static/js/main.d5e48b19.js.map"
+    "main.6940b309.css.map": "/dreamcore/static/css/main.6940b309.css.map",
+    "main.ae68bc6b.js.map": "/dreamcore/static/js/main.ae68bc6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f2d6af2.css",
-    "static/js/main.d5e48b19.js"
+    "static/css/main.6940b309.css",
+    "static/js/main.ae68bc6b.js"
   ]
 }
