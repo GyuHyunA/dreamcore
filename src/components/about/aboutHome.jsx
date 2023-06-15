@@ -21,8 +21,6 @@ const AboutHome = () => {
     };
   }, [tar, btar]);
 
-  console.log(tar);
-
   return (
     <>
       <AboutHomeStyle>
@@ -106,7 +104,6 @@ const AboutProStyle = styled.section`
   }
   .professor-wrap {
     width: 100%;
-    padding: 0 230px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     place-items: center;

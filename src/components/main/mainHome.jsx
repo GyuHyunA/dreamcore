@@ -5,6 +5,7 @@ import { Image } from "antd";
 const MainHome = () => {
   const [position, setPosition] = useState(0);
   const [toCla, setTocla] = useState(false);
+  // const auRef = useRef();
 
   function onScroll() {
     setPosition(window.scrollY);
@@ -15,6 +16,9 @@ const MainHome = () => {
     if (position > window.innerHeight - 400) {
       setTocla(true);
     }
+    // auRef.current.volume = 0.1;
+
+    // console.log(auRef.current)
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (position < 300) {
@@ -26,6 +30,9 @@ const MainHome = () => {
   return (
     <>
       <MainHomeStyle>
+        {/* <AudioStyle controls loop autoPlay preload="auto" ref={auRef}>
+          <source src="assets/dreambgm.mp3" />
+        </AudioStyle> */}
         <div className="text-wrap tw-up">
           <p className="main-text">Digital Contents Design 24Graduation Exhibition</p>
           <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
@@ -50,15 +57,11 @@ const MainHome = () => {
         </div>
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
-          <Image
-            src="assets/image/poster.jpeg"
-            alt=""
-            className={`poster_img ${toCla ? "ia" : " "}`}
-          />
+          <Image src="assets/image/poster.jpeg" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut eligendi voluptates quam minus earum quis temporibus non
-              consectetur ullam, iure dolor quasi velit, corrupti tempore amet fuga eaque itaque?
+              드림코어는 몽환적임과 익숙하지만 현실과 동떨어진 괴리감으로 낯설음을 동시에 안겨주는 스타일을 의미하는 단어입니다 미디어 콘텐츠를 다루며
+              익숙한 환경해서 항상 새로운 시도를 하는 우리를 나타내는 것 같아 키워드로 선정하였습니다
             </p>
           </div>
         </div>
@@ -192,7 +195,7 @@ const MainPosterStyle = styled.section`
     .ant-image-mask {
       transform: translateX(-30px);
       background: rgba(0, 0, 0, 0);
-      .ant-image-mask-info{
+      .ant-image-mask-info {
         display: none;
       }
     }
@@ -208,6 +211,9 @@ const MainPosterStyle = styled.section`
       align-items: center;
       transform: translateX(-225px);
       opacity: 0;
+      p{
+        font-size: 16px;
+      }
     }
     .ta {
       opacity: 1;
@@ -230,6 +236,12 @@ const MainPosterStyle = styled.section`
   }
 `;
 
+// const AudioStyle = styled.audio`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 99999999999999;
+// `;
 // const MainTrailerStyle = styled.section`
 //   width: 100vw;
 //   height: 100vh;

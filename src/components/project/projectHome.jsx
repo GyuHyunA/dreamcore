@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { dummyList } from "../../dummy/dummylist";
 
 const ProjectHome = () => {
+  const [tar, setTar] = useState(0);
+  const [btar, setbtar] = useState(false);
+
+  function onScroll() {
+    setTar(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    if (tar === 0) {
+      setbtar(true);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [tar, btar]);
   return (
     <>
       <ProjectHomeStyle>
@@ -22,7 +39,7 @@ const ProjectHome = () => {
             <Link to="/project">Interactive Media</Link>
           </li>
         </ul>
-        <ContentsListStyle>
+        <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
             return <ListContainer num={v.id} key={v.id} link={v.link} />;
           })}
@@ -72,6 +89,13 @@ const ContentsListStyle = styled.ul`
   grid-template-columns: 320px 320px 320px;
   justify-content: center;
   gap: 80px;
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0.5s;
+
+  &.act {
+    opacity: 1;
+  }
   li {
     width: 320px;
     height: 180px;
