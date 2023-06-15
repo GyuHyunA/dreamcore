@@ -38,7 +38,7 @@ const MainHome = () => {
           <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
         </div>
         <div className="home-con">
-          <video src="https://rcsvr.myds.me/agh/ma_vi1.mp4" muted autoPlay loop></video>
+          <video src="https://rcsvr.myds.me/agh/ma_vi2.mp4" muted autoPlay loop></video>
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
@@ -57,7 +57,11 @@ const MainHome = () => {
         </div>
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
-          <Image src="assets/image/poster.jpeg" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
+          <Image
+            src="https://images.unsplash.com/photo-1682959012312-12a041e3d5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80"
+            alt=""
+            className={`poster_img ${toCla ? "ia" : " "}`}
+          />
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
               드림코어는 몽환적임과 익숙하지만 현실과 동떨어진 괴리감으로 낯설음을 동시에 안겨주는 스타일을 의미하는 단어입니다 미디어 콘텐츠를 다루며
@@ -211,7 +215,8 @@ const MainPosterStyle = styled.section`
       align-items: center;
       transform: translateX(-225px);
       opacity: 0;
-      p{
+      p {
+        z-index: 0;
         font-size: 16px;
       }
     }
