@@ -106,18 +106,21 @@ const AboutProStyle = styled.section`
   }
   .professor-wrap {
     width: 100%;
-    /* padding: 0 230px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 230px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+    /* justify-content: center; */
+    /* align-items: center; */
     .professor-box {
       width: 250px;
       height: 300px;
-      margin-right: 30px;
+      /* margin-right: 30px; */
       border-radius: 10px;
       border: 1px solid black;
       &:nth-child(2) {
-        margin-right: 0;
+        /* margin-right: 0; */
       }
       &:hover {
         background-color: #00000025;

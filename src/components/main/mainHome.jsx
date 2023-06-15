@@ -51,7 +51,7 @@ const MainHome = () => {
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
           <Image
-            src="https://wallpapers.com/images/high/dreamcore-lawn-4k1znkbio0xilnw6.webp"
+            src="assets/image/poster.jpeg"
             alt=""
             className={`poster_img ${toCla ? "ia" : " "}`}
           />
