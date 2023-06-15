@@ -12,7 +12,7 @@ const AboutHome = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
-    if (tar > 0) {
+    if (tar === 0) {
       setbtar(true);
     }
 
@@ -20,8 +20,6 @@ const AboutHome = () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, [tar, btar]);
-
-  console.log(tar);
 
   return (
     <>
@@ -68,7 +66,7 @@ const AboutHomeStyle = styled.section`
     font-size: 40px;
     margin-bottom: 10px;
     opacity: 0;
-    transition: 1s;
+    transition: 1.5s;
     &.act {
       opacity: 1;
     }
@@ -77,7 +75,7 @@ const AboutHomeStyle = styled.section`
     font-size: 18px;
     margin-bottom: 50px;
     opacity: 0;
-    transition: 1s;
+    transition: 1.5s;
     &.act {
       opacity: 1;
     }
@@ -85,8 +83,8 @@ const AboutHomeStyle = styled.section`
   p {
     font-size: 12px;
     opacity: 0;
-    transition: 1s;
-    transition-delay: 2s;
+    transition: 1.5s;
+    transition-delay: 1s;
     &.act {
       opacity: 1;
     }
@@ -106,7 +104,6 @@ const AboutProStyle = styled.section`
   }
   .professor-wrap {
     width: 100%;
-    /* padding: 0 230px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +114,7 @@ const AboutProStyle = styled.section`
       border-radius: 10px;
       border: 1px solid black;
       &:nth-child(2) {
-        margin-right: 0;
+        /* margin-right: 0; */
       }
       &:hover {
         background-color: #00000025;
@@ -125,5 +122,13 @@ const AboutProStyle = styled.section`
         transition: 1s;
       }
     }
+  }
+  @media screen and (max-width: 1280px) {
+    .professor-wrap {
+    .professor-box {
+      width: calc(250px / 2);
+      height: calc(300px / 2);
+    }
+  }
   }
 `;
