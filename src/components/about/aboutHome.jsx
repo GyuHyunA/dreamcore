@@ -12,7 +12,7 @@ const AboutHome = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
-    if (tar > 0) {
+    if (tar === 0) {
       setbtar(true);
     }
 
@@ -68,7 +68,7 @@ const AboutHomeStyle = styled.section`
     font-size: 40px;
     margin-bottom: 10px;
     opacity: 0;
-    transition: 1s;
+    transition: 1.5s;
     &.act {
       opacity: 1;
     }
@@ -77,7 +77,7 @@ const AboutHomeStyle = styled.section`
     font-size: 18px;
     margin-bottom: 50px;
     opacity: 0;
-    transition: 1s;
+    transition: 1.5s;
     &.act {
       opacity: 1;
     }
@@ -85,8 +85,8 @@ const AboutHomeStyle = styled.section`
   p {
     font-size: 12px;
     opacity: 0;
-    transition: 1s;
-    transition-delay: 2s;
+    transition: 1.5s;
+    transition-delay: 1s;
     &.act {
       opacity: 1;
     }

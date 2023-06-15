@@ -13,17 +13,15 @@ const MainHome = () => {
     window.addEventListener("scroll", onScroll);
     if (position > window.innerHeight - 400) {
       setTocla(true);
-      console.log(toCla);
     }
     return () => {
       window.removeEventListener("scroll", onScroll);
-      if(position < 300){
-        setTocla(false)
+      if (position < 300) {
+        setTocla(false);
       }
     };
   }, [position, toCla]);
 
-  // console.log(window.innerHeight*1);
 
   return (
     <>
@@ -48,12 +46,10 @@ const MainHome = () => {
       </MainHomeStyle>
       <MainPosterStyle>
         <div className={`title-wrap`}>
-          <h1 className="title">
-            DREAMCORE
-          </h1>
+          <h1 className="title">DREAMCORE</h1>
         </div>
         <div className={`poster-wrap`}>
-          <div className={`testimg ${toCla ? "ia" : " "}`}></div>
+          <div className={`poster_img ${toCla ? "ia" : " "}`}></div>
           {/* <img src="" alt="" className="poster_img" /> */}
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
@@ -149,18 +145,19 @@ const MainPosterStyle = styled.section`
     margin: 100px 0;
     opacity: 1;
     /* padding: 0 210px; */
-    .testimg {
+    .poster_img {
       width: 450px;
       height: 650px;
       background-color: lightgray;
       /* margin-right: 30px; */
       transform: translateX(225px);
       opacity: 0;
+      z-index: 3;
     }
     .ia {
       opacity: 1;
-      transform: translateX(-30px);
       transition: 1s;
+      transform: translateX(-30px);
     }
     .poster_text {
       width: 450px;
@@ -174,6 +171,7 @@ const MainPosterStyle = styled.section`
       opacity: 1;
       transform: translateX(30px);
       transition: 1s;
+      transition-delay: 1s;
     }
   }
 `;
