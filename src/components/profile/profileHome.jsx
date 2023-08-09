@@ -49,7 +49,7 @@ export default ProfileHome;
 const ListContainer = ({ num, link }) => {
   return (
     <li>
-      <Link to={`/${link}`}>
+      <Link to={`${link}`}>
         <div>{num}</div>
       </Link>
     </li>
