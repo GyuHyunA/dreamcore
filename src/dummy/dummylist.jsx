@@ -37,7 +37,7 @@ export const dummyList = [
         id: 0,
         title: "작품1",
         img: "https://images.unsplash.com/photo-1691546039838-2494ecd6afd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "plan"
+        tag: "video"
       },
       {
         id: 1,
@@ -70,7 +70,7 @@ export const dummyList = [
         id: 1,
         title: "작품2",
         img: "https://plus.unsplash.com/premium_photo-1675826774815-35b8a48ddc2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "inter"
+        tag: "video"
       },
       {
         id: 2,
@@ -103,7 +103,7 @@ export const dummyList = [
         id: 2,
         title: "작품3",
         img: "https://images.unsplash.com/photo-1691156568477-7188f31e6f4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "web"
+        tag: "video"
       },
     ],
   },
@@ -118,7 +118,7 @@ export const dummyList = [
         id: 0,
         title: "작품1",
         img: "https://images.unsplash.com/photo-1691546039838-2494ecd6afd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "mul"
+        tag: "video"
       },
       {
         id: 1,
@@ -184,7 +184,7 @@ export const dummyList = [
         id: 2,
         title: "작품3",
         img: "https://images.unsplash.com/photo-1691156568477-7188f31e6f4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "web"
+        tag: "video"
       },
     ],
   },
@@ -301,33 +301,6 @@ export const dummyList = [
     title: "타이틀11",
     link: "title11",
     name: "홍길동11",
-    text: "Lorem ipsum",
-    work: [
-      {
-        id: 0,
-        title: "작품1",
-        img: "https://images.unsplash.com/photo-1691546039838-2494ecd6afd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "mul"
-      },
-      {
-        id: 1,
-        title: "작품2",
-        img: "https://plus.unsplash.com/premium_photo-1675826774815-35b8a48ddc2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "inter"
-      },
-      {
-        id: 2,
-        title: "작품3",
-        img: "https://images.unsplash.com/photo-1691156568477-7188f31e6f4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        tag: "web"
-      },
-    ],
-  },
-  {
-    id: 12,
-    title: "타이틀12",
-    link: "title12",
-    name: "홍길동12",
     text: "Lorem ipsum",
     work: [
       {

@@ -21,27 +21,28 @@ const ProjectHome = () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, [tar, btar]);
+
   return (
     <>
       <ProjectHomeStyle>
         <h2>Project</h2>
         <ul className="project-navlist">
           <li>
-            <Link to="/project">Video Animation</Link>
+            <a href="/project">Video Animation</a>
           </li>
           <li>
-            <Link to="/project">Multimedia Design</Link>
+            <a href="/project">Multimedia Design</a>
           </li>
           <li>
-            <Link to="/project">Web Studio</Link>
+            <a href="/project">Web Studio</a>
           </li>
           <li>
-            <Link to="/project">Interactive Media</Link>
+            <a href="/project">Interactive Media</a>
           </li>
         </ul>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} link={v.link} />;
+            return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
           })}
         </ContentsListStyle>
       </ProjectHomeStyle>
@@ -51,13 +52,17 @@ const ProjectHome = () => {
 
 export default ProjectHome;
 
-const ListContainer = ({ num, link }) => {
+const ListContainer = ({ num, link, work }) => {
   return (
-    <li>
-      <Link to={`/${link}`}>
-        <div>{num}</div>
-      </Link>
-    </li>
+    <>
+      <li>
+        <Link to={`${link}`}>
+          <div>
+            <p></p>
+          </div>
+        </Link>
+      </li>
+    </>
   );
 };
 
