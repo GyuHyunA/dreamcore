@@ -16,9 +16,7 @@ const MainHome = () => {
     if (position > window.innerHeight - 400) {
       setTocla(true);
     }
-    // auRef.current.volume = 0.1;
 
-    // console.log(auRef.current)
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (position < 300) {
@@ -186,12 +184,9 @@ const MainPosterStyle = styled.section`
     align-items: center;
     margin: 100px 0;
     opacity: 1;
-    /* padding: 0 210px; */
     .poster_img {
-      width: 450px;
-      height: 650px;
-      /* background-color: lightgray; */
-      /* margin-right: 30px; */
+      width: 400px;
+      height: 600px;
       transform: translateX(225px);
       opacity: 0;
       z-index: 3;
@@ -209,8 +204,8 @@ const MainPosterStyle = styled.section`
       transform: translateX(-30px);
     }
     .poster_text {
-      width: 450px;
-      height: 650px;
+      width: 400px;
+      height: 600px;
       display: inline-flex;
       align-items: center;
       transform: translateX(-225px);
@@ -227,15 +222,28 @@ const MainPosterStyle = styled.section`
       transition-delay: 1s;
     }
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1480px) {
     .poster-wrap {
       .poster_img {
-        width: calc(450px / 2);
-        height: calc(650px / 2);
+        width: calc(450px / 1.5);
+        height: calc(650px / 1.5);
       }
       .poster_text {
-        width: calc(450px / 2);
-        height: calc(650px / 2);
+        width: calc(450px / 1.5);
+        height: calc(650px / 1.5);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1580px) {
+    .poster-wrap {
+      .poster_img {
+        width: calc(450px / 1.3);
+        height: calc(650px / 1.3);
+      }
+      .poster_text {
+        width: calc(450px / 1.5);
+        height: calc(650px / 1.5);
       }
     }
   }
