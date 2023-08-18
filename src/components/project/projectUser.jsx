@@ -6,13 +6,15 @@ import { styled } from "styled-components";
 const ProjectUser = () => {
   const { productId } = useParams();
   const product = dummyList.find((v) => v.link === productId);
+  console.log(product)
   return (
     <ProjectUserStyle>
       <div className="title-wrap">
         <div className="back-img">
-          <img src={product.work[1].img} alt="" />
+          {/* <img src={product.work[1].img} alt="" /> */}
+          <div className="imgbox"></div>
         </div>
-        <h2>{product.work[0].title}</h2>
+        <h2>이건 어떤 작품인가요?</h2>
       </div>
       <div className="pr-wrap">
         <div className="presentation-wrap">
@@ -32,22 +34,23 @@ const ProjectUserStyle = styled.div`
     width: 100%;
     height: 300px;
     .back-img {
-      overflow: hidden;
-      position: relative;
+      /* overflow: hidden; */
       width: inherit;
       height: inherit;
       object-fit: cover;
       object-position: center;
-      img {
+      //이미지 대용
+      .imgbox {
         width: inherit;
-        /* opacity: .5; */
+        height: inherit;//이미지 넣을 때 뻬기
+        background-color: lightgray;
       }
     }
     h2 {
       position: absolute;
       top: 30px;
       padding: 0 150px;
-      color: white;
+      color: black;
     }
   }
 

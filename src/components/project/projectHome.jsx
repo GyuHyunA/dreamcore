@@ -1,7 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { styled } from "styled-components";
-import { dummyList } from "../../dummy/dummylist";
+
+// 목록 더미 리스트
+const projectNav = [
+  {
+    id: 0,
+    title: "Video Animation",
+    link: "video",
+  },
+  {
+    id: 1,
+    title: "Multimedia Design",
+    link: "multi",
+  },
+  {
+    id: 2,
+    title: "Web Studio",
+    link: "web",
+  },
+  {
+    id: 3,
+    title: "Interactive Media",
+    link: "inter",
+  },
+];
 
 const ProjectHome = () => {
   const [tar, setTar] = useState(0);
@@ -27,24 +50,17 @@ const ProjectHome = () => {
       <ProjectHomeStyle>
         <h2>Project</h2>
         <ul className="project-navlist">
-          <li>
-            <a href="/project">Video Animation</a>
-          </li>
-          <li>
-            <a href="/project">Multimedia Design</a>
-          </li>
-          <li>
-            <a href="/project">Web Studio</a>
-          </li>
-          <li>
-            <a href="/project">Interactive Media</a>
-          </li>
-        </ul>
-        <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
+          {projectNav.map((v) => {
+            return (
+              <li key={v.id}>
+                <Link to={v.link} className={v.id ? "act" : ""}>
+                  {v.title}
+                </Link>
+              </li>
+            );
           })}
-        </ContentsListStyle>
+        </ul>
+        <Outlet />
       </ProjectHomeStyle>
     </>
   );
@@ -52,19 +68,7 @@ const ProjectHome = () => {
 
 export default ProjectHome;
 
-const ListContainer = ({ num, link, work }) => {
-  return (
-    <>
-      <li>
-        <Link to={`${link}`}>
-          <div>
-            <p></p>
-          </div>
-        </Link>
-      </li>
-    </>
-  );
-};
+
 
 const ProjectHomeStyle = styled.section`
   width: 100vw;
@@ -89,27 +93,3 @@ const ProjectHomeStyle = styled.section`
   }
 `;
 
-const ContentsListStyle = styled.ul`
-  display: grid;
-  grid-template-columns: 320px 320px 320px;
-  justify-content: center;
-  gap: 80px;
-  opacity: 0;
-  transition: 1s;
-  transition-delay: 0.5s;
-
-  &.act {
-    opacity: 1;
-  }
-  li {
-    width: 320px;
-    height: 180px;
-    list-style: none;
-    a div {
-      width: 320px;
-      height: 180px;
-      background-color: lightgray;
-      border-radius: 10px;
-    }
-  }
-`;
