@@ -1,10 +1,10 @@
-import AboutHome from "../components/about/aboutHome";
-import MainHome from "../components/main/mainHome";
-import ProfileHome from "../components/profile/profileHome";
-import ProfileUser from "../components/profile/profileUser";
-import ProjectHome from "../components/project/projectHome";
-import ProjectUser from "../components/project/projectUser";
-import ProjectVideo from "../components/project/projectVideo";
+import AboutHome from "../components/pc/about/aboutHome";
+import MainHome from "../components/pc/main/mainHome";
+import ProfileHome from "../components/pc/profile/profileHome";
+import ProfileUser from "../components/pc/profile/profileUser";
+import ProjectHome from "../components/pc/project/projectHome";
+import ProjectUser from "../components/pc/project/projectUser";
+import ProjectList from "../components/pc/project/projectList";
 import ErrorPage from "../pages/errorpage";
 import ReadyPage from "../pages/readypage";
 
@@ -31,20 +31,24 @@ export const routerList = [
     element: <ProjectHome />,
     children: [
       {
+        path: "home",
+        element: <ProjectList />,
+      },
+      {
         path: "video",
-        element: <ProjectVideo />,
+        element: <ProjectList />,
       },
       {
         path: "multi",
-        element: <ProjectVideo />,
+        element: <ProjectList />,
       },
       {
         path: "web",
-        element: <ProjectVideo />,
+        element: <ProjectList />,
       },
       {
         path: "inter",
-        element: <ProjectVideo />,
+        element: <ProjectList />,
       },
     ],
   },

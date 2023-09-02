@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { dummyList } from "../../dummy/dummylist";
+import { dummyList } from "../../../dummy/dummylist";
 import { styled } from "styled-components";
 
 const ProjectUser = () => {
