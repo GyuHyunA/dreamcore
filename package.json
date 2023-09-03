@@ -11,6 +11,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.4",
+    "react-responsive": "^9.0.2",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "sass": "^1.62.1",
@@ -43,6 +44,5 @@
       "last 1 safari version"
     ]
   },
-
   "__homepage": "https://gyuhyuna.github.io/dreamcore"
 }
