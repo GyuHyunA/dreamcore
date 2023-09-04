@@ -32,7 +32,7 @@ function App() {
       </PcComp>
       <MobileComp>
         <MainNavm />
-        {/* {routersm} */}
+        {routersm}
         <MainFooterm />
       </MobileComp>
     </>
