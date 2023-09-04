@@ -6,6 +6,7 @@ import { routerListm } from "../routers/routerlistm";
 import MainFooter from "./pc/mainfooter";
 import MainNav from "./pc/mainNav";
 import MainNavm from "./mobile/mainNavm";
+import MainFooterm from "./mobile/mainfooterm";
 
 function App() {
   //view 확인
@@ -14,8 +15,8 @@ function App() {
   useEffect(() => {
     const viewInnerw = window.innerWidth;
     const viewInnerh = window.innerHeight;
-    setInnW(viewInnerw)
-    setInnH(viewInnerh)
+    setInnW(viewInnerw);
+    setInnH(viewInnerh);
     return () => {};
   }, [innW, innH]);
 
@@ -32,6 +33,7 @@ function App() {
       <MobileComp>
         <MainNavm />
         {/* {routersm} */}
+        <MainFooterm />
       </MobileComp>
     </>
   );
