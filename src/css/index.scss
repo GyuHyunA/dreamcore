@@ -41,5 +41,29 @@ h3 {
 }
 
 .ant-image-preview-mask {
-  background-color: rgba(0, 0, 0, 0.8)!important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+// Drawer - pages/mobile/mainNavm
+.drawer {
+  padding: 0 15px;
+  padding-top: 30px;
+  .hamenu-drawer {
+    width: 100%;
+    list-style: none;
+    padding: 0 40px;
+    .link {
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+      border-bottom: 1px solid gray;
+      &:last-child{
+      border-bottom: none;
+      }
+      a {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
 }
