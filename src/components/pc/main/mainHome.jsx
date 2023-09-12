@@ -36,7 +36,7 @@ const MainHome = () => {
           <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
         </div>
         <div className="home-con">
-          <video src="https://rcsvr.myds.me/agh/ma_vi2.mp4" muted autoPlay loop></video>
+          <video src="https://rcsvr.myds.me/agh/ma_viv2.mp4" muted autoPlay loop></video>
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
@@ -50,9 +50,7 @@ const MainHome = () => {
         </div>
       </MainHomeStyle>
       <MainPosterStyle>
-        <div className={`title-wrap`}>
-          <h1 className="title">DREAMCORE</h1>
-        </div>
+
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
           <Image
@@ -82,12 +80,13 @@ const MainHomeStyle = styled.section`
     width: 100%;
     height: 100vh;
     overflow: hidden;
+
     video {
       position: relative;
       width: 100%;
       height: 100%;
       z-index: 1;
-      object-fit: cover;
+      /* object-fit: cover; */
       object-position: center;
     }
   }
@@ -165,20 +164,11 @@ const MainHomeStyle = styled.section`
 const MainPosterStyle = styled.section`
   width: 100vw;
   height: 100vh;
-  .title-wrap {
-    position: relative;
-    padding-top: 100px;
-    margin-bottom: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .title {
-      font-size: 28px;
-    }
-  }
+
   .poster-wrap {
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

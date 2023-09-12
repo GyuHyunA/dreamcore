@@ -41,9 +41,7 @@ const MainHomeM = () => {
         </div>
       </MainHomeMStyle>
       <MainPosterStyle>
-        <div className={`title-wrap`}>
-          <h1 className="title">DREAMCORE</h1>
-        </div>
+
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
           <Image
@@ -68,6 +66,10 @@ export default MainHomeM;
 const MainHomeMStyle = styled.section`
   width: 100vw;
   height: 100vh;
+  background-image: url("assets/image/poster_main.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   .text-wrap {
     position: absolute;
     z-index: 2;
@@ -119,20 +121,10 @@ const MainHomeMStyle = styled.section`
 const MainPosterStyle = styled.section`
   width: 100vw;
   height: 100vh;
-  .title-wrap {
-    position: relative;
-    padding-top: 70px;
-    margin-bottom: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .title {
-      font-size: 24px;
-    }
-  }
   .poster-wrap {
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

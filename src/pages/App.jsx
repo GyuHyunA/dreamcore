@@ -24,7 +24,9 @@ function App() {
   const routersm = useRoutes(routerListm);
   return (
     <>
-      {innW} / {innH}
+      {/* <div className="abtest">
+        {innW} / {innH}
+      </div> */}
       <PcComp>
         <MainNav />
         {routers}
