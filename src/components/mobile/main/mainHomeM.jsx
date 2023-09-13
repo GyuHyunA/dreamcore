@@ -66,7 +66,7 @@ export default MainHomeM;
 const MainHomeMStyle = styled.section`
   width: 100vw;
   height: 100vh;
-  background-image: url("assets/image/poster_main.png");
+  background-image: url("https://rcsvr.myds.me/agh/poster_main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
