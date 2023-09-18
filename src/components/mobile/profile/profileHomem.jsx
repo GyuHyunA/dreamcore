@@ -26,14 +26,14 @@ const ProfileHomeM = () => {
     <>
       <ProfileHomeMStyle>
         <h2>profile</h2>
-        <ul className="profile-navlist">
+        {/* <ul className="profile-navlist">
           <li>
             <Link href="/profile">ㄱ~ㅂ</Link>
           </li>
           <li>
             <Link href="/profile">ㅅ~ㅎ</Link>
           </li>
-        </ul>
+        </ul> */}
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
             return <ListContainer num={v.id} link={v.link} key={v.id} />;
@@ -49,9 +49,10 @@ export default ProfileHomeM;
 const ListContainer = ({ num, link }) => {
   return (
     <li>
-      <Link to={`${link}`}>
-        <div>{num}</div>
+      <Link to="">
+        <div></div>
       </Link>
+      <p>이름</p>
     </li>
   );
 };
@@ -86,7 +87,7 @@ const ContentsListStyle = styled.ul`
   display: grid;
   grid-template-columns: 150px 150px ;
   justify-content: center;
-  gap: 80px;
+  gap: 20px;
   opacity: 0;
   transition: 1s;
   transition-delay: 0.5s;
@@ -97,11 +98,16 @@ const ContentsListStyle = styled.ul`
     width: 150px;
     height: 200px;
     list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
     a div {
       width: 150px;
       height: 200px;
       background-color: lightgray;
       border-radius: 10px;
+    }
+    p{
+      margin-top: 10px;
     }
   }
 `;

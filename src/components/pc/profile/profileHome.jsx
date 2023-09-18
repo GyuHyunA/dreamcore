@@ -25,15 +25,15 @@ const ProfileHome = () => {
   return (
     <>
       <ProfileHomeStyle>
-        <h2>profile</h2>
-        <ul className="profile-navlist">
+        <h2>Profile</h2>
+        {/* <ul className="profile-navlist">
           <li>
             <Link href="/profile">ㄱ~ㅂ</Link>
           </li>
           <li>
             <Link href="/profile">ㅅ~ㅎ</Link>
           </li>
-        </ul>
+        </ul> */}
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
             return <ListContainer num={v.id} link={v.link} key={v.id} />;
@@ -50,8 +50,9 @@ const ListContainer = ({ num, link }) => {
   return (
     <li>
       <Link to={`${link}`}>
-        <div>{num}</div>
+        <div></div>
       </Link>
+      <p>이름</p>
     </li>
   );
 };
@@ -100,11 +101,15 @@ const ContentsListStyle = styled.ul`
     width: 250px;
     height: 300px;
     list-style: none;
+    text-align: center;
     a div {
       width: 250px;
       height: 300px;
       background-color: lightgray;
       border-radius: 10px;
+    }
+    p{
+      margin-top: 10px;
     }
   }
 `;

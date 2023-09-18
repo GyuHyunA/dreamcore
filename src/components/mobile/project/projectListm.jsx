@@ -44,10 +44,10 @@ const ListContainer = ({ num, link, work }) => {
   return (
     <>
       <li>
-        <Link to={`${link}`}>
+        <Link to="">
           <div></div>
-          <p>{num}</p>
         </Link>
+        <p>작품명</p>
       </li>
     </>
   );
@@ -77,9 +77,9 @@ const ProjectVideoStyle = styled.section`
 
 const ContentsListStyle = styled.ul`
   display: grid;
-  grid-template-columns: 180px 180px;
+  grid-template-columns: 330px;
   justify-content: center;
-  gap: 30px;
+  gap: 12px;
   opacity: 0;
   transition: 1s;
   transition-delay: 0.5s;
@@ -88,14 +88,18 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
-    width: 180px;
-    height: 180px;
+    width: 330px;
+    height: 236px;
     list-style: none;
+    text-align: center;
+    margin-bottom: 50px;
     a div {
-      width: 180px;
-      height: 180px;
+      width: 330px;
+      height: 236px;
       background-color: lightgray;
-      border-radius: 10px;
+    }
+    p{
+      margin-top: 10px;
     }
   }
 `;

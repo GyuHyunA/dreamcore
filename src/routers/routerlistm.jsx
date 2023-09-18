@@ -4,6 +4,7 @@ import ProfileHomem from "../components/mobile/profile/profileHomem";
 import ProfileUserm from "../components/mobile/profile/profileUserm";
 import ProjectHomeM from "../components/mobile/project/projectHomem";
 import ProjectListm from "../components/mobile/project/projectListm";
+import ProjectListmWeb from "../components/mobile/project/projectListmWeb";
 import ProjectUserM from "../components/mobile/project/projectUserm";
 import ErrorPage from "../pages/errorpage";
 import ReadyPage from "../pages/readypage";
@@ -44,7 +45,7 @@ export const routerListm = [
       },
       {
         path: "video",
-        element: <ProjectListm />,
+        element: <ProjectListmWeb />,
       },
       {
         path: "multi",
@@ -52,7 +53,7 @@ export const routerListm = [
       },
       {
         path: "web",
-        element: <ProjectListm />,
+        element: <ProjectListmWeb />,
       },
       {
         path: "inter",

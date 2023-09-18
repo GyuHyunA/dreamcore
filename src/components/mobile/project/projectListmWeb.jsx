@@ -5,7 +5,7 @@ import { dummyList } from "../../../dummy/dummylist";
 
 // 목록 더미 리스트
 
-const ProjectVideoV = () => {
+const ProjectVideomWeb = () => {
   const params = useParams();
   console.log(params);
   const [tar, setTar] = useState(0);
@@ -27,18 +27,18 @@ const ProjectVideoV = () => {
 
   return (
     <>
-      <ProjectVideoVStyle>
+      <ProjectVideomWebStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
             return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
           })}
         </ContentsListStyle>
-      </ProjectVideoVStyle>
+      </ProjectVideomWebStyle>
     </>
   );
 };
 
-export default ProjectVideoV;
+export default ProjectVideomWeb;
 
 const ListContainer = ({ num, link, work }) => {
   return (
@@ -53,7 +53,7 @@ const ListContainer = ({ num, link, work }) => {
   );
 };
 
-const ProjectVideoVStyle = styled.section`
+const ProjectVideomWebStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   padding-bottom: 100px;
@@ -67,7 +67,6 @@ const ProjectVideoVStyle = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 230px;
     margin-bottom: 50px;
     list-style: none;
     li {
@@ -78,9 +77,9 @@ const ProjectVideoVStyle = styled.section`
 
 const ContentsListStyle = styled.ul`
   display: grid;
-  grid-template-columns: 250px 250px 250px;
+  grid-template-columns: 180px 180px;
   justify-content: center;
-  gap: 80px;
+  gap: 12px;
   opacity: 0;
   transition: 1s;
   transition-delay: 0.5s;
@@ -89,20 +88,18 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
-    width: 250px;
-    height: 350px;
+    width: 180px;
+    height: 252px;
     list-style: none;
     text-align: center;
-    a {
-      div {
-        width: 250px;
-        height: 350px;
-        background-color: lightgray;
-      }
+    margin-bottom: 40px;
+    a div {
+      width: 180px;
+      height: 252px;
+      background-color: lightgray;
     }
-    p {
+    p{
       margin-top: 10px;
     }
   }
-
 `;

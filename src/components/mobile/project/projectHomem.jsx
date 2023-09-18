@@ -6,22 +6,22 @@ import { styled } from "styled-components";
 const projectNav = [
   {
     id: 0,
-    title: "Video Animation",
+    title: "Animation",
     link: "video",
   },
   {
     id: 1,
-    title: "Multimedia Design",
+    title: "Multimedia",
     link: "multi",
   },
   {
     id: 2,
-    title: "Web Studio",
+    title: "Web",
     link: "web",
   },
   {
     id: 3,
-    title: "Interactive Media",
+    title: "Interactive",
     link: "inter",
   },
 ];

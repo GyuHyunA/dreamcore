@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { dummyList } from "../../../dummy/dummylist";
 
@@ -30,7 +30,7 @@ const ProjectVideo = () => {
       <ProjectVideoStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
+            return <ListContainer />;
           })}
         </ContentsListStyle>
       </ProjectVideoStyle>
@@ -40,12 +40,14 @@ const ProjectVideo = () => {
 
 export default ProjectVideo;
 
-const ListContainer = ({ num, link, work }) => {
+const ListContainer = () => {
   return (
     <>
       <li>
-        <div></div>
-        <p>작품이름</p>
+        <Link to="">
+          <div></div>
+        </Link>
+        <p>작품명</p>
         {/* <p>이름</p> */}
       </li>
     </>
@@ -77,7 +79,7 @@ const ProjectVideoStyle = styled.section`
 
 const ContentsListStyle = styled.ul`
   display: grid;
-  grid-template-columns: 252px 252px 252px;
+  grid-template-columns: 350px 350px 350px;
   justify-content: center;
   gap: 80px;
   opacity: 0;
@@ -88,16 +90,30 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
-    width: 252px;
-    height: 180px;
+    width: 350px;
+    height: 250px;
     list-style: none;
     text-align: center;
-    div {
-      width: 252px;
-      height: 180px;
+    a div {
+      width: 350px;
+      height: 250px;
       background-color: lightgray;
-      border-radius: 10px;
-      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 250px 250px 250px;
+    li {
+      width: 250px;
+      height: 179px;
+      a {
+        div {
+          width: 250px;
+          height: 179px;
+        }
+      }
     }
   }
 `;
