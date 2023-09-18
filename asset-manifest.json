@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dreamcore/static/css/main.e160d925.css",
-    "main.js": "/dreamcore/static/js/main.01f165e3.js",
+    "main.js": "/dreamcore/static/js/main.2452f1c5.js",
     "static/media/Pretendard-Bold.otf": "/dreamcore/static/media/Pretendard-Bold.3ec32cdae5bc0c0026a6.otf",
     "static/media/Pretendard-Regular.otf": "/dreamcore/static/media/Pretendard-Regular.de88013f2ea98a04dede.otf",
     "static/media/Pretendard-ExtraBold.otf": "/dreamcore/static/media/Pretendard-ExtraBold.6a8d330cb367af8c7a57.otf",
     "index.html": "/dreamcore/index.html",
     "main.e160d925.css.map": "/dreamcore/static/css/main.e160d925.css.map",
-    "main.01f165e3.js.map": "/dreamcore/static/js/main.01f165e3.js.map"
+    "main.2452f1c5.js.map": "/dreamcore/static/js/main.2452f1c5.js.map"
   },
   "entrypoints": [
     "static/css/main.e160d925.css",
-    "static/js/main.01f165e3.js"
+    "static/js/main.2452f1c5.js"
   ]
 }
