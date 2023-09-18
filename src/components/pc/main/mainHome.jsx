@@ -50,19 +50,12 @@ const MainHome = () => {
         </div>
       </MainHomeStyle>
       <MainPosterStyle>
-
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
-          <Image
-            src="https://images.unsplash.com/photo-1682959012312-12a041e3d5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80"
-            alt=""
-            className={`poster_img ${toCla ? "ia" : " "}`}
-          />
+          <Image src="https://rcsvr.myds.me/agh/poster.png" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
-            <p>
-              드림코어는 몽환적임과 익숙하지만 현실과 동떨어진 괴리감으로 낯설음을 동시에 안겨주는 스타일을 의미하는 단어입니다 미디어 콘텐츠를 다루며
-              익숙한 환경해서 항상 새로운 시도를 하는 우리를 나타내는 것 같아 키워드로 선정하였습니다
-            </p>
+            <p>드림코어는 몽환적임과 익숙하지만 현실과 동떨어진 괴리감으로 낯설음을 동시에 안겨주는 스타일을 의미하는 단어입니다</p>
+            <p>미디어 콘텐츠를 다루며 익숙한 환경에서 항상 새로운 시도를 하는 우리와 닮아 키워드로 선정하였습니다</p>
           </div>
         </div>
       </MainPosterStyle>
@@ -197,12 +190,17 @@ const MainPosterStyle = styled.section`
       width: 400px;
       height: 600px;
       display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       transform: translateX(-225px);
       opacity: 0;
       p {
         z-index: 0;
         font-size: 16px;
+        &:nth-child(1) {
+          margin-bottom: 20px;
+        }
       }
     }
     .ta {
