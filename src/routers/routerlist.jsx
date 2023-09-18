@@ -7,6 +7,7 @@ import ProjectUser from "../components/pc/project/projectUser";
 import ProjectList from "../components/pc/project/projectList";
 import ErrorPage from "../pages/errorpage";
 import ReadyPage from "../pages/readypage";
+import ProjectListWeb from "../components/pc/project/projectListWeb";
 
 export const routerList = [
   {
@@ -25,6 +26,7 @@ export const routerList = [
     path: "about",
     element: <AboutHome />,
   },
+
   //project
   {
     path: "project/*",
@@ -36,7 +38,7 @@ export const routerList = [
       },
       {
         path: "video",
-        element: <ProjectList />,
+        element: <ProjectListWeb />,
       },
       {
         path: "multi",
@@ -44,7 +46,7 @@ export const routerList = [
       },
       {
         path: "web",
-        element: <ProjectList />,
+        element: <ProjectListWeb />,
       },
       {
         path: "inter",
@@ -52,6 +54,7 @@ export const routerList = [
       },
     ],
   },
+
   //project 하위 페이지
   {
     path: "project/video/:productId",

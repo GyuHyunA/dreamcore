@@ -5,7 +5,7 @@ import { dummyList } from "../../../dummy/dummylist";
 
 // 목록 더미 리스트
 
-const ProjectVideo = () => {
+const ProjectVideoV = () => {
   const params = useParams();
   console.log(params);
   const [tar, setTar] = useState(0);
@@ -27,32 +27,32 @@ const ProjectVideo = () => {
 
   return (
     <>
-      <ProjectVideoStyle>
+      <ProjectVideoVStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
             return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
           })}
         </ContentsListStyle>
-      </ProjectVideoStyle>
+      </ProjectVideoVStyle>
     </>
   );
 };
 
-export default ProjectVideo;
+export default ProjectVideoV;
 
 const ListContainer = ({ num, link, work }) => {
   return (
     <>
       <li>
         <div></div>
-        <p>작품이름{num}</p>
+        <p>작품 제목{num}</p>
         <p>이름</p>
       </li>
     </>
   );
 };
 
-const ProjectVideoStyle = styled.section`
+const ProjectVideoVStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   padding-bottom: 100px;
@@ -77,7 +77,7 @@ const ProjectVideoStyle = styled.section`
 
 const ContentsListStyle = styled.ul`
   display: grid;
-  grid-template-columns: 252px 252px 252px;
+  grid-template-columns: 180px 180px 180px;
   justify-content: center;
   gap: 80px;
   opacity: 0;
@@ -88,13 +88,13 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
-    width: 252px;
-    height: 180px;
+    width: 180px;
+    height: 252px;
     list-style: none;
     text-align: center;
     div {
-      width: 252px;
-      height: 180px;
+      width: 180px;
+      height: 252px;
       background-color: lightgray;
       border-radius: 10px;
       margin-bottom: 10px;
