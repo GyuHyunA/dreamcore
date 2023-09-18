@@ -45,8 +45,8 @@ const ListContainer = ({ num, link, work }) => {
     <>
       <li>
         <div></div>
-        <p>작품이름{num}</p>
-        <p>이름</p>
+        <p>작품이름</p>
+        {/* <p>이름</p> */}
       </li>
     </>
   );
