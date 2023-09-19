@@ -4,7 +4,7 @@ export const videoDataList = [
     title: "Austin Mini Cooper Mk2",
     name: "박중구",
     poster: "pjg_mk2.png",
-    link: "",
+    link: "pjg_video.mp4",
   },
   {
     id: 1,

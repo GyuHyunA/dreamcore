@@ -1,16 +1,19 @@
 import AboutHome from "../components/pc/about/aboutHome";
 import MainHome from "../components/pc/main/mainHome";
-import ProfileHome from "../components/pc/profile/profileHome";
-import ProfileUser from "../components/pc/profile/profileUser";
-import ProjectHome from "../components/pc/project/projectHome";
-import ProjectUser from "../components/pc/project/projectUser";
 import ErrorPage from "../pages/errorpage";
 import ReadyPage from "../pages/readypage";
-import ProjectList from "../components/pc/project/projectListMulti";
+// project
 import ProjectListWeb from "../components/pc/project/projectListWeb";
 import ProjectListVideo from "../components/pc/project/projectListVideo";
 import ProjectListMulti from "../components/pc/project/projectListMulti";
 import ProjectListInter from "../components/pc/project/projectListInter";
+import ProjectUserVideo from "../components/pc/project/projectUserVideo";
+import ProjectUserMulti from "../components/pc/project/projectUserMulti";
+// profile
+import ProfileHome from "../components/pc/profile/profileHome";
+import ProfileUser from "../components/pc/profile/profileUser";
+import ProjectHome from "../components/pc/project/projectHome";
+import ProjectUserInter from "../components/pc/project/projectUserInter";
 
 export const routerList = [
   {
@@ -37,7 +40,7 @@ export const routerList = [
     children: [
       {
         path: "home",
-        element: <ProjectList />,
+        element: <ProjectListVideo />,
       },
       {
         path: "video",
@@ -61,19 +64,19 @@ export const routerList = [
   //project 하위 페이지
   {
     path: "project/video/:productId",
-    element: <ProjectUser />,
+    element: <ProjectUserVideo />,
   },
   {
     path: "project/multi/:productId",
-    element: <ProjectUser />,
+    element: <ProjectUserMulti />,
   },
   {
     path: "project/web/:productId",
-    element: <ProjectUser />,
+    element: <ProjectUserVideo />,
   },
   {
     path: "project/inter/:productId",
-    element: <ProjectUser />,
+    element: <ProjectUserInter />,
   },
   //profile
   {

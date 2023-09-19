@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { videoDataList } from "../../../data/videoData";
 
 // 목록 더미 리스트
 
 const ProjectListVideo = () => {
-  const params = useParams();
-  console.log(params);
+  // const params = useParams();
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 
@@ -30,7 +29,7 @@ const ProjectListVideo = () => {
       <ProjectListVideoStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {videoDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
           })}
         </ContentsListStyle>
       </ProjectListVideoStyle>
@@ -40,11 +39,11 @@ const ProjectListVideo = () => {
 
 export default ProjectListVideo;
 
-const ListContainer = ({ title, name, link, poster }) => {
+const ListContainer = ({ id, title, name, link, poster }) => {
   return (
     <>
       <li>
-        <Link to={link}>
+        <Link to={`${id}`}>
           <div>
             <img src={`${process.env.PUBLIC_URL}/assets/videoimg/${poster}`} alt="" />
           </div>

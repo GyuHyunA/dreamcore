@@ -30,7 +30,7 @@ const ProjectListMulti = () => {
       <ProjectListMultiStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {multiDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} poster={v.poster} />;
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} />;
           })}
         </ContentsListStyle>
       </ProjectListMultiStyle>
@@ -40,11 +40,11 @@ const ProjectListMulti = () => {
 
 export default ProjectListMulti;
 
-const ListContainer = ({ title, name, poster }) => {
+const ListContainer = ({id, title, name, poster }) => {
   return (
     <>
       <li>
-        <Link to="">
+        <Link to={`${id}`}>
           <div>
             <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${poster}`} alt="" />
           </div>

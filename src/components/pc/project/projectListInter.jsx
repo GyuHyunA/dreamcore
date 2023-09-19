@@ -30,7 +30,7 @@ const ProjectListInter = () => {
       <ProjectListInterStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {interDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} poster={v.poster} />;
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} />;
           })}
         </ContentsListStyle>
       </ProjectListInterStyle>
@@ -40,11 +40,11 @@ const ProjectListInter = () => {
 
 export default ProjectListInter;
 
-const ListContainer = ({ title, name, poster }) => {
+const ListContainer = ({id, title, name, poster }) => {
   return (
     <>
       <li>
-        <Link to="">
+        <Link to={`${id}`}>
           <div>
             <img src={`${process.env.PUBLIC_URL}/assets/interimg/${poster}`} alt="" />
           </div>
