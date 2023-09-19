@@ -4,10 +4,13 @@ import ProfileHome from "../components/pc/profile/profileHome";
 import ProfileUser from "../components/pc/profile/profileUser";
 import ProjectHome from "../components/pc/project/projectHome";
 import ProjectUser from "../components/pc/project/projectUser";
-import ProjectList from "../components/pc/project/projectList";
 import ErrorPage from "../pages/errorpage";
 import ReadyPage from "../pages/readypage";
+import ProjectList from "../components/pc/project/projectListMulti";
 import ProjectListWeb from "../components/pc/project/projectListWeb";
+import ProjectListVideo from "../components/pc/project/projectListVideo";
+import ProjectListMulti from "../components/pc/project/projectListMulti";
+import ProjectListInter from "../components/pc/project/projectListInter";
 
 export const routerList = [
   {
@@ -38,11 +41,11 @@ export const routerList = [
       },
       {
         path: "video",
-        element: <ProjectListWeb />,
+        element: <ProjectListVideo />,
       },
       {
         path: "multi",
-        element: <ProjectList />,
+        element: <ProjectListMulti />,
       },
       {
         path: "web",
@@ -50,7 +53,7 @@ export const routerList = [
       },
       {
         path: "inter",
-        element: <ProjectList />,
+        element: <ProjectListInter />,
       },
     ],
   },

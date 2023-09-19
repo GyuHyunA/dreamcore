@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { styled } from "styled-components";
-import { dummyList } from "../../../dummy/dummylist";
+// import { dummyList } from "../../../dummy/dummylist";
+import { webDataList } from "../../../data/webData";
 
 // 목록 더미 리스트
 
-const ProjectVideoV = () => {
+const ProjectListWeb = () => {
   const params = useParams();
   console.log(params);
   const [tar, setTar] = useState(0);
@@ -24,36 +25,37 @@ const ProjectVideoV = () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, [tar, btar]);
-
   return (
     <>
-      <ProjectVideoVStyle>
+      <ProjectListWebStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
+          {webDataList.map((v) => {
+            return <ListContainer key={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
           })}
         </ContentsListStyle>
-      </ProjectVideoVStyle>
+      </ProjectListWebStyle>
     </>
   );
 };
 
-export default ProjectVideoV;
+export default ProjectListWeb;
 
-const ListContainer = ({ num, link, work }) => {
+const ListContainer = ({ title, name, link, poster }) => {
   return (
     <>
       <li>
-        <Link to="">
-          <div></div>
+        <Link to={link}>
+          <div>
+            <img src={`${process.env.PUBLIC_URL}/assets/webimg/${poster}`} alt="" />
+          </div>
         </Link>
-        <p>작품명</p>
+        <p>{title}</p>
       </li>
     </>
   );
 };
 
-const ProjectVideoVStyle = styled.section`
+const ProjectListWebStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   padding-bottom: 100px;
@@ -98,11 +100,16 @@ const ContentsListStyle = styled.ul`
         width: 250px;
         height: 350px;
         background-color: lightgray;
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          object-position: center;
+        }
       }
     }
     p {
       margin-top: 10px;
     }
   }
-
 `;

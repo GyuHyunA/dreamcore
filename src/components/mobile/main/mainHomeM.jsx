@@ -32,7 +32,8 @@ const MainHomeM = () => {
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
-            <p>10.31 - 11.06</p>
+            <p>10.31 -</p>
+            <p>11.06</p>
           </div>
           <div className="time">
             <p>OPEN. 5PM - 6PM Mon</p>
