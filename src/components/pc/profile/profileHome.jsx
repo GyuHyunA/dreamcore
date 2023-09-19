@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { dummyList } from "../../../dummy/dummylist";
+import { profileDataList } from "../../../data/profileData";
 
 const ProfileHome = () => {
   const [tar, setTar] = useState(0);
@@ -26,17 +26,9 @@ const ProfileHome = () => {
     <>
       <ProfileHomeStyle>
         <h2>Profile</h2>
-        {/* <ul className="profile-navlist">
-          <li>
-            <Link href="/profile">ㄱ~ㅂ</Link>
-          </li>
-          <li>
-            <Link href="/profile">ㅅ~ㅎ</Link>
-          </li>
-        </ul> */}
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {dummyList.map((v) => {
-            return <ListContainer num={v.id} link={v.link} key={v.id} />;
+          {profileDataList.map((v) => {
+            return <ListContainer key={v.id} kname={v.kname} ename={v.ename} email={v.email} profile={v.profile} />;
           })}
         </ContentsListStyle>
       </ProfileHomeStyle>
@@ -46,13 +38,19 @@ const ProfileHome = () => {
 
 export default ProfileHome;
 
-const ListContainer = ({ num, link }) => {
+const ListContainer = ({ kname, ename, email, profile }) => {
   return (
     <li>
-      <Link to={``}>
-        <div></div>
+      <Link to={""} style={{ cursor: "auto" }}>
+        <div>
+          <img src={`${process.env.PUBLIC_URL}/assets/profileimg/${profile}`} alt="" />
+        </div>
       </Link>
-      <p>이름</p>
+      <div className="name-box">
+        <h1 className="kname">{kname}</h1>
+        <p className="ename">{ename}</p>
+        <p className="email">{email}</p>
+      </div>
     </li>
   );
 };
@@ -91,7 +89,7 @@ const ContentsListStyle = styled.ul`
   gap: 80px;
   opacity: 0;
   transition: 1s;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 
   &.act {
     opacity: 1;
@@ -101,15 +99,33 @@ const ContentsListStyle = styled.ul`
     width: 250px;
     height: 300px;
     list-style: none;
-    text-align: center;
+    margin-bottom: 30px;
     a div {
       width: 250px;
       height: 300px;
       background-color: lightgray;
       border-radius: 10px;
+      img {
+        width: inherit;
+        height: inherit;
+        border-radius: 10px;
+      }
     }
-    p{
-      margin-top: 10px;
+    .name-box {
+      padding: 20px 0;
+      padding-left: 15px;
+      p {
+        font-size: 16px;
+      }
+      .kname {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .ename, .email {
+        font-family: "Pretendard-l";
+        color: #3B3B3B;
+      }
+
     }
   }
 `;
