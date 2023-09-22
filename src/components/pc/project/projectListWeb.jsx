@@ -7,8 +7,6 @@ import { webDataList } from "../../../data/webData";
 // 목록 더미 리스트
 
 const ProjectListWeb = () => {
-  const params = useParams();
-  console.log(params);
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 
@@ -45,11 +43,15 @@ const ListContainer = ({ title, name, link, poster }) => {
     <>
       <li>
         <Link to={link}>
-          <div>
+          <div className="list-wrap">
+            <div className="tn-wrap">
+              <h3 className="name">{name}</h3>
+              <h3 className="title">{title}</h3>
+              <div className="filter"></div>
+            </div>
             <img src={`${process.env.PUBLIC_URL}/assets/webimg/${poster}`} alt="" />
           </div>
         </Link>
-        <p>{title}</p>
       </li>
     </>
   );
@@ -91,15 +93,39 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
+    position: relative;
     width: 250px;
     height: 350px;
     list-style: none;
-    text-align: center;
     a {
-      div {
+      .list-wrap {
         width: 250px;
         height: 350px;
         background-color: lightgray;
+        .tn-wrap {
+          opacity: 0;
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          transition: 0.5s;
+          &:hover {
+            opacity: 1;
+          }
+          h3 {
+            font-size: 14px;
+            &:nth-child(1) {
+              margin-bottom: 5px;
+            }
+          }
+          .filter {
+            position: absolute;
+            left: -20px;
+            bottom: -20px;
+            width: 250px;
+            height: 350px;
+            background-color: #00000020;
+          }
+        }
         img {
           width: inherit;
           height: inherit;

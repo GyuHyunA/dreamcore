@@ -39,11 +39,7 @@ export const routerList = [
     element: <ProjectHome />,
     children: [
       {
-        path: "home",
-        element: <ProjectListVideo />,
-      },
-      {
-        path: "video",
+        path: "moving",
         element: <ProjectListVideo />,
       },
       {
@@ -63,7 +59,7 @@ export const routerList = [
 
   //project 하위 페이지
   {
-    path: "project/video/:productId",
+    path: "project/moving/:productId",
     element: <ProjectUserVideo />,
   },
   {

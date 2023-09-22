@@ -40,7 +40,7 @@ const MainHome = () => {
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
-            <p>10.31 -</p>
+            <p>10.30 -</p>
             <p>11.05</p>
           </div>
           <div className="time">

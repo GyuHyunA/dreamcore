@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { multiDataList } from "../../../data/multiData";
 
 // 목록 더미 리스트
 
 const ProjectListMulti = () => {
-  const params = useParams();
-  console.log(params);
+  // const params = useParams();
+  // console.log(params);
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 
@@ -40,17 +40,20 @@ const ProjectListMulti = () => {
 
 export default ProjectListMulti;
 
-const ListContainer = ({id, title, name, poster }) => {
+const ListContainer = ({ id, title, name, poster }) => {
   return (
     <>
       <li>
         <Link to={`${id}`}>
-          <div>
+          <div className="list-wrap">
+            <div className="tn-wrap">
+              <h3 className="name">{name}</h3>
+              <h3 className="title">{title}</h3>
+              <div className="filter"></div>
+            </div>
             <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${poster}`} alt="" />
           </div>
         </Link>
-        <p>{title}</p>
-        {/* <p>이름</p> */}
       </li>
     </>
   );
@@ -92,14 +95,38 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
+    position: relative;
     width: 350px;
     height: 250px;
     list-style: none;
-    text-align: center;
-    a div {
+    a .list-wrap {
       width: 350px;
       height: 250px;
-      background-color: lightgray;
+      /* background-color: lightgray; */
+      .tn-wrap {
+        opacity: 0;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        transition: 0.5s;
+        &:hover {
+          opacity: 1;
+        }
+        h3 {
+          font-size: 14px;
+          &:nth-child(1) {
+            margin-bottom: 5px;
+          }
+        }
+        .filter {
+          position: absolute;
+          left: -20px;
+          bottom: -20px;
+          width: 350px;
+          height: 250px;
+          background-color: #00000020;
+        }
+      }
       img {
         width: inherit;
         height: inherit;

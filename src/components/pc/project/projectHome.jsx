@@ -1,59 +1,65 @@
 import React, { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { styled } from "styled-components";
 
 // 목록 더미 리스트
 const projectNav = [
   {
     id: 0,
-    title: "Video Animation",
-    link: "video",
+    title: "영상애니메이션",
+    link: "moving",
   },
   {
     id: 1,
-    title: "Multimedia Design",
+    title: "멀티미디어디자인",
     link: "multi",
   },
   {
     id: 2,
-    title: "Web Studio",
+    title: "웹디자인스튜디오",
     link: "web",
   },
   {
     id: 3,
-    title: "Interactive Media",
+    title: "인터렉티브미디어",
     link: "inter",
   },
 ];
 
 const ProjectHome = () => {
+  let paramId = useLocation().pathname.slice(9, 18);
+
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
+  const [navAction, setNavAction] = useState(paramId);
 
   function onScroll() {
     setTar(window.scrollY);
   }
 
   useEffect(() => {
+    //scroll event
     window.addEventListener("scroll", onScroll);
     if (tar === 0) {
       setbtar(true);
     }
+    setNavAction(paramId);
 
     return () => {
+      //return scroll evnet
       window.removeEventListener("scroll", onScroll);
     };
-  }, [tar, btar]);
+  }, [tar, btar, paramId, navAction]);
 
   return (
     <>
       <ProjectHomeStyle>
         <h2>Project</h2>
         <ul className="project-navlist">
-          {projectNav.map((v) => {
+          {projectNav.map((v, i) => {
             return (
               <li key={v.id}>
-                <Link to={v.link} className={v.id ? "act" : ""}>
+                <Link to={v.link} className={navAction === v.link ? "act" : ""} onClick={() => setNavAction(v.link)}>
                   {v.title}
                 </Link>
               </li>
@@ -67,8 +73,6 @@ const ProjectHome = () => {
 };
 
 export default ProjectHome;
-
-
 
 const ProjectHomeStyle = styled.section`
   width: 100vw;
@@ -89,7 +93,12 @@ const ProjectHomeStyle = styled.section`
     list-style: none;
     li {
       font-size: 18px;
+      a {
+        color: black;
+      }
+      .act {
+        color: #afafaf;
+      }
     }
   }
 `;
-
