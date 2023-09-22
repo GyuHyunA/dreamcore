@@ -99,7 +99,7 @@ const ContentsListStyle = styled.ul`
     width: 250px;
     height: 300px;
     list-style: none;
-    margin-bottom: 30px;
+    position: relative;
     a div {
       width: 250px;
       height: 300px;
@@ -114,6 +114,15 @@ const ContentsListStyle = styled.ul`
     .name-box {
       padding: 20px 0;
       padding-left: 15px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: .5s;
+      user-select: none;
+      &:hover{
+        opacity: 1;
+      }
       p {
         font-size: 16px;
       }
