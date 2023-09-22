@@ -7,11 +7,14 @@ import ProjectHomeM from "../components/mobile/project/projectHomem";
 import ProjectListmWeb from "../components/mobile/project/projectListmWeb";
 import ProjectListmMulti from "../components/mobile/project/projectListmMulti";
 import ProjectListmInter from "../components/mobile/project/projectListmInter";
-import ProjectUserM from "../components/mobile/project/projectUserm";
+import ProjectListmVideo from "../components/mobile/project/projectListmVideo";
+import ProjectUsermVideo from "../components/mobile/project/projectUsermVideo";
+import ProjectUsermMulti from "../components/mobile/project/projectUsermMulti";
+import ProjectUsermInter from "../components/mobile/project/projectUsermInter";
 //profile
 import ProfileHomem from "../components/mobile/profile/profileHomem";
 import ProfileUserm from "../components/mobile/profile/profileUserm";
-import ProjectListmVideo from "../components/mobile/project/projectListmVideo";
+
 
 export const routerListm = [
   {
@@ -63,19 +66,15 @@ export const routerListm = [
   },
   //project 하위 페이지
   {
-    path: "project/video/:productId",
-    element: <ProjectUserM />,
+    path: "project/moving/:productId",
+    element: <ProjectUsermVideo />,
   },
   {
     path: "project/multi/:productId",
-    element: <ProjectUserM />,
-  },
-  {
-    path: "project/web/:productId",
-    element: <ProjectUserM />,
+    element: <ProjectUsermMulti />,
   },
   {
     path: "project/inter/:productId",
-    element: <ProjectUserM />,
+    element: <ProjectUsermInter />,
   },
 ];

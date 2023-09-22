@@ -3,45 +3,49 @@ import { useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { videoDataList } from "../../../data/videoData";
 
-const ProjectUserVideo = () => {
+const ProjectUsermVideo = () => {
   const { productId } = useParams();
   let shortcut = videoDataList[productId];
   return (
-    <ProjectUserVideoStyle>
+    <ProjectUsermVideoStyle>
       <div className="video-contain">
         <h1 className="vi-title">{shortcut.title}</h1>
         <p className="vi-name">{shortcut.name}</p>
-        <video className="vi-video" controls>
+        <video className="vi-video" controls preload="auto">
           <source src={`${process.env.PUBLIC_URL}/assets/video/${shortcut.link}`} />
         </video>
       </div>
       <div className="dorok-contain">
         <img src={`${process.env.PUBLIC_URL}/assets/videoimg/dummy.png`} alt="" className="do-dorok" />
       </div>
-    </ProjectUserVideoStyle>
+    </ProjectUsermVideoStyle>
   );
 };
 
-export default ProjectUserVideo;
+export default ProjectUsermVideo;
 
-const ProjectUserVideoStyle = styled.div`
+const ProjectUsermVideoStyle = styled.div`
   width: 100vw;
   padding-top: 100px;
+  margin-bottom: 100px;
+
   .video-contain {
     width: 100%;
-    height: 100vh;
     text-align: center;
+    margin-bottom: 100px;
+
     .vi-title {
-      font-size: 34px;
-      margin-bottom: 80px;
+      font-size: 20px;
+      margin-bottom: 30px;
     }
     .vi-name {
-      font-size: 18px;
-      margin-bottom: 80px;
+      font-size: 15px;
+      margin-bottom: 30px;
     }
     .vi-video {
-      width: 1280px;
-      height: 720px;
+      width: 384px;
+      height: 216px;
+      background-color: #eaeaea;
       source {
         width: inherit;
         height: inherit;
@@ -49,14 +53,12 @@ const ProjectUserVideoStyle = styled.div`
     }
   }
   .dorok-contain {
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    .do-dorok{
-      width: 520px;
-      height: 728px;
+    .do-dorok {
+      width: 320px;
+      height: 452px;
     }
   }
 `;
