@@ -108,7 +108,6 @@ const ContentsListStyle = styled.ul`
       img {
         width: inherit;
         height: inherit;
-        border-radius: 10px;
       }
     }
     .name-box {
@@ -118,9 +117,8 @@ const ContentsListStyle = styled.ul`
       bottom: 0;
       left: 0;
       opacity: 0;
-      transition: .5s;
-      user-select: none;
-      &:hover{
+      transition: 0.5s;
+      &:hover {
         opacity: 1;
       }
       p {
@@ -130,11 +128,11 @@ const ContentsListStyle = styled.ul`
         font-size: 16px;
         margin-bottom: 10px;
       }
-      .ename, .email {
+      .ename,
+      .email {
         font-family: "Pretendard-l";
-        color: #3B3B3B;
+        color: #3b3b3b;
       }
-
     }
   }
 `;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { dummyList } from "../../../dummy/dummylist";
+import { profileDataList } from "../../../data/profileData";
 
 const ProfileHomeM = () => {
   const [tar, setTar] = useState(0);
@@ -27,8 +27,8 @@ const ProfileHomeM = () => {
       <ProfileHomeMStyle>
         <h2>Profile</h2>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {dummyList.map((v) => {
-            return <ListContainer num={v.id} link={v.link} key={v.id} />;
+          {profileDataList.map((v) => {
+            return <ListContainer key={v.id} kname={v.kname} ename={v.ename} email={v.email} profile={v.profile} />;
           })}
         </ContentsListStyle>
       </ProfileHomeMStyle>
@@ -38,13 +38,19 @@ const ProfileHomeM = () => {
 
 export default ProfileHomeM;
 
-const ListContainer = ({ num, link }) => {
+const ListContainer = ({ kname, ename, email, profile }) => {
   return (
     <li>
-      <Link to="">
-        <div></div>
+      <Link to={""} style={{ cursor: "auto" }}>
+        <div>
+          <img src={`${process.env.PUBLIC_URL}/assets/profileimg/${profile}`} alt="" />
+        </div>
       </Link>
-      <p>이름</p>
+      <div className="name-box">
+        <h1 className="kname">{kname}</h1>
+        <p className="ename">{ename}</p>
+        <p className="email">{email}</p>
+      </div>
     </li>
   );
 };
@@ -77,7 +83,7 @@ const ProfileHomeMStyle = styled.section`
 
 const ContentsListStyle = styled.ul`
   display: grid;
-  grid-template-columns: 150px 150px ;
+  grid-template-columns: 150px 150px;
   justify-content: center;
   gap: 20px;
   opacity: 0;
@@ -90,16 +96,29 @@ const ContentsListStyle = styled.ul`
     width: 150px;
     height: 200px;
     list-style: none;
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     a div {
       width: 150px;
       height: 200px;
       background-color: lightgray;
       border-radius: 10px;
+      img {
+        width: inherit;
+        height: inherit;
+      }
     }
-    p{
+    .name-box {
       margin-top: 10px;
+      .kname {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .ename,
+      .email {
+        font-size: 12px;
+        font-family: "Pretendard-l";
+        color: #3b3b3b;
+      }
     }
   }
 `;
