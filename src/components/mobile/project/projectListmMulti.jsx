@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { dummyList } from "../../../dummy/dummylist";
+import { multiDataList } from "../../../data/multiData";
 
 // 목록 더미 리스트
 
-const ProjectVideo = () => {
-  const params = useParams();
-  console.log(params);
+const ProjectListmMulti = () => {
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 
@@ -27,33 +25,38 @@ const ProjectVideo = () => {
 
   return (
     <>
-      <ProjectVideoStyle>
+      <ProjectListmMultiStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {dummyList.map((v) => {
-            return <ListContainer num={v.id} key={v.id} link={v.link} work={v.work} />;
+          {multiDataList.map((v) => {
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} />;
           })}
         </ContentsListStyle>
-      </ProjectVideoStyle>
+      </ProjectListmMultiStyle>
     </>
   );
 };
 
-export default ProjectVideo;
+export default ProjectListmMulti;
 
-const ListContainer = ({ num, link, work }) => {
+const ListContainer = ({ id, title, name, poster }) => {
   return (
     <>
       <li>
-        <Link to="">
-          <div></div>
+        <Link to={`${id}`}>
+          <div className="list-wrap">
+            <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${poster}`} alt="" />
+          </div>
+          <div className="text-wrap">
+            <h3 className="title">{title}</h3>
+            <p className="name">{name}</p>
+          </div>
         </Link>
-        <p>작품명</p>
       </li>
     </>
   );
 };
 
-const ProjectVideoStyle = styled.section`
+const ProjectListmMultiStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   padding-bottom: 100px;
@@ -91,15 +94,30 @@ const ContentsListStyle = styled.ul`
     width: 330px;
     height: 236px;
     list-style: none;
-    text-align: center;
-    margin-bottom: 50px;
-    a div {
-      width: 330px;
-      height: 236px;
-      background-color: lightgray;
-    }
-    p{
-      margin-top: 10px;
+    margin-bottom: 70px;
+    position: relative;
+    a {
+      .list-wrap {
+        width: 330px;
+        height: 236px;
+        background-color: lightgray;
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .text-wrap {
+        margin-top: 10px;
+        h3 {
+          font-size: 12px;
+        }
+        p{
+          font-size: 12px;
+          margin-top: 3px;
+        }
+      }
     }
   }
 `;

@@ -1,13 +1,17 @@
 import AboutHomem from "../components/mobile/about/aboutHomem";
 import MainHomeM from "../components/mobile/main/mainHomeM";
-import ProfileHomem from "../components/mobile/profile/profileHomem";
-import ProfileUserm from "../components/mobile/profile/profileUserm";
-import ProjectHomeM from "../components/mobile/project/projectHomem";
-import ProjectListm from "../components/mobile/project/projectListm";
-import ProjectListmWeb from "../components/mobile/project/projectListmWeb";
-import ProjectUserM from "../components/mobile/project/projectUserm";
 import ErrorPage from "../pages/errorpage";
 import ReadyPage from "../pages/readypage";
+//project
+import ProjectHomeM from "../components/mobile/project/projectHomem";
+import ProjectListmWeb from "../components/mobile/project/projectListmWeb";
+import ProjectListmMulti from "../components/mobile/project/projectListmMulti";
+import ProjectListmInter from "../components/mobile/project/projectListmInter";
+import ProjectUserM from "../components/mobile/project/projectUserm";
+//profile
+import ProfileHomem from "../components/mobile/profile/profileHomem";
+import ProfileUserm from "../components/mobile/profile/profileUserm";
+import ProjectListmVideo from "../components/mobile/project/projectListmVideo";
 
 export const routerListm = [
   {
@@ -40,16 +44,12 @@ export const routerListm = [
     element: <ProjectHomeM />,
     children: [
       {
-        path: "home",
-        element: <ProjectListm />,
-      },
-      {
-        path: "video",
-        element: <ProjectListmWeb />,
+        path: "moving",
+        element: <ProjectListmVideo />,
       },
       {
         path: "multi",
-        element: <ProjectListm />,
+        element: <ProjectListmMulti />,
       },
       {
         path: "web",
@@ -57,7 +57,7 @@ export const routerListm = [
       },
       {
         path: "inter",
-        element: <ProjectListm />,
+        element: <ProjectListmInter />,
       },
     ],
   },

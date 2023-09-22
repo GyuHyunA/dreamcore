@@ -6,8 +6,6 @@ import { multiDataList } from "../../../data/multiData";
 // 목록 더미 리스트
 
 const ProjectListMulti = () => {
-  // const params = useParams();
-  // console.log(params);
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 

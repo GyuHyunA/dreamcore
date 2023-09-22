@@ -6,7 +6,6 @@ import { videoDataList } from "../../../data/videoData";
 // 목록 더미 리스트
 
 const ProjectListVideo = () => {
-  // const params = useParams();
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 

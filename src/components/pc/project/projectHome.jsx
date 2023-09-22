@@ -1,30 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { styled } from "styled-components";
-
-// 목록 더미 리스트
-const projectNav = [
-  {
-    id: 0,
-    title: "영상애니메이션",
-    link: "moving",
-  },
-  {
-    id: 1,
-    title: "멀티미디어디자인",
-    link: "multi",
-  },
-  {
-    id: 2,
-    title: "웹디자인스튜디오",
-    link: "web",
-  },
-  {
-    id: 3,
-    title: "인터렉티브미디어",
-    link: "inter",
-  },
-];
+import { projectNav } from "../../../data/listData";
 
 const ProjectHome = () => {
   let paramId = useLocation().pathname.slice(9, 18);

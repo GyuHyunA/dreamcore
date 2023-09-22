@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { styled } from "styled-components";
 // import { dummyList } from "../../../dummy/dummylist";
 import { webDataList } from "../../../data/webData";
@@ -129,7 +129,6 @@ const ContentsListStyle = styled.ul`
         img {
           width: inherit;
           height: inherit;
-          object-fit: cover;
           object-position: center;
         }
       }

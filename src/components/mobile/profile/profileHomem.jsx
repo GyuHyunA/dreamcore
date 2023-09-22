@@ -25,15 +25,7 @@ const ProfileHomeM = () => {
   return (
     <>
       <ProfileHomeMStyle>
-        <h2>profile</h2>
-        {/* <ul className="profile-navlist">
-          <li>
-            <Link href="/profile">ㄱ~ㅂ</Link>
-          </li>
-          <li>
-            <Link href="/profile">ㅅ~ㅎ</Link>
-          </li>
-        </ul> */}
+        <h2>Profile</h2>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {dummyList.map((v) => {
             return <ListContainer num={v.id} link={v.link} key={v.id} />;
@@ -66,7 +58,7 @@ const ProfileHomeMStyle = styled.section`
   padding-bottom: 100px;
   h2 {
     padding-top: 100px;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 50px;
     text-align: center;
   }

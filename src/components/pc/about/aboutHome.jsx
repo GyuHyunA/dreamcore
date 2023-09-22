@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { professorList } from "../../../data/listData";
 
 const AboutHome = () => {
   const [tar, setTar] = useState(0);
@@ -30,23 +30,24 @@ const AboutHome = () => {
         <p className={`${btar ? "act" : ""}`}>창작하는 과정에서 다양한 표현 방식을 배워 나갑니다</p>
       </AboutHomeStyle>
       <AboutProStyle>
-        <h2>Project Guidance Professor</h2>
+        <h2 className="main-title">Project Guidance Professor</h2>
         <div className="professor-wrap">
-          <Link>
-            <div className="professor-box"></div>
-          </Link>
-          <Link>
-            <div className="professor-box"></div>
-          </Link>
-          <Link>
-            <div className="professor-box"></div>
-          </Link>
-          <Link>
-            <div className="professor-box"></div>
-          </Link>
-          <Link>
-            <div className="professor-box"></div>
-          </Link>
+          {professorList.map((v) => {
+            return (
+              <div className="professor-box" key={v.id}>
+                <div className="hoverbox">
+                  <div className="top">
+                    <h2 className="kname">{v.kname}</h2>
+                    <h3 className="field">{v.field}</h3>
+                  </div>
+                  <div className="bottom">
+                    <p className="ename">{v.ename}</p>
+                    <p className="email">{v.email}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </AboutProStyle>
     </>
@@ -98,7 +99,7 @@ const AboutProStyle = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  h2 {
+  .main-title {
     font-size: 28px;
     margin-bottom: 100px;
   }
@@ -108,27 +109,59 @@ const AboutProStyle = styled.section`
     justify-content: center;
     align-items: center;
     .professor-box {
-      width: 250px;
-      height: 300px;
+      position: relative;
+      width: 220px;
+      height: 270px;
       margin-right: 30px;
-      border-radius: 10px;
-      border: 1px solid black;
-      &:nth-child(2) {
-        /* margin-right: 0; */
-      }
-      &:hover {
-        background-color: #00000025;
-        /* border: none; */
-        transition: 1s;
+      /* border-radius: 10px; */
+      background-color: #f6f6f6;
+      .hoverbox {
+        width: inherit;
+        height: inherit;
+        position: relative;
+        /* color: #dcdcdc; */
+        &:hover {
+          /* color: black; */
+          transition: 1s;
+        }
+        .top {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          .kname {
+            font-size: 20px;
+            font-family: "Pretendard-sb";
+            margin-bottom: 3px;
+          }
+          .field {
+            font-size: 14px;
+            font-family: "Pretendard-sb";
+          }
+        }
+        .bottom {
+          position: absolute;
+          bottom: 12px;
+          left: 12px;
+          .ename {
+            font-size: 15px;
+            font-family: "Pretendard-l";
+          }
+          .email {
+            margin-top: 3px;
+            font-size: 15px;
+            font-family: "Pretendard-l";
+          }
+        }
       }
     }
   }
   @media screen and (max-width: 1280px) {
     .professor-wrap {
-    .professor-box {
-      width: calc(250px / 2);
-      height: calc(300px / 2);
+      gap: 30px;
+      flex-wrap: wrap;
+      .professor-box {
+        margin-right: 0;
+      }
     }
-  }
   }
 `;

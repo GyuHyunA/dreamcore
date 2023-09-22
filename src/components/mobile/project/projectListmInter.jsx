@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { webDataList } from "../../../data/webData";
+import { interDataList } from "../../../data/interData";
 
 // 목록 더미 리스트
 
-const ProjectListmWeb = () => {
+const ProjectListmInter = () => {
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 
@@ -25,26 +25,26 @@ const ProjectListmWeb = () => {
 
   return (
     <>
-      <ProjectListWebStyle>
+      <ProjectListmInterStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {webDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
+          {interDataList.map((v) => {
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} />;
           })}
         </ContentsListStyle>
-      </ProjectListWebStyle>
+      </ProjectListmInterStyle>
     </>
   );
 };
 
-export default ProjectListmWeb;
+export default ProjectListmInter;
 
-const ListContainer = ({ title, name, link, poster }) => {
+const ListContainer = ({ id, title, name, poster }) => {
   return (
     <>
       <li>
-        <Link to={`${link}`}>
+        <Link to={`${id}`}>
           <div className="list-wrap">
-            <img src={`${process.env.PUBLIC_URL}/assets/webimg/${poster}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/interimg/${poster}`} alt="" />
           </div>
           <div className="text-wrap">
             <h3 className="title">{title}</h3>
@@ -56,7 +56,7 @@ const ListContainer = ({ title, name, link, poster }) => {
   );
 };
 
-const ProjectListWebStyle = styled.section`
+const ProjectListmInterStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   padding-bottom: 100px;
@@ -80,7 +80,7 @@ const ProjectListWebStyle = styled.section`
 
 const ContentsListStyle = styled.ul`
   display: grid;
-  grid-template-columns: 180px 180px;
+  grid-template-columns: 330px;
   justify-content: center;
   gap: 12px;
   opacity: 0;
@@ -91,14 +91,15 @@ const ContentsListStyle = styled.ul`
     opacity: 1;
   }
   li {
-    width: 180px;
-    height: 252px;
+    width: 330px;
+    height: 236px;
     list-style: none;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
+    position: relative;
     a {
       .list-wrap {
-        width: 180px;
-        height: 252px;
+        width: 330px;
+        height: 236px;
         background-color: lightgray;
         img {
           width: inherit;
@@ -112,7 +113,7 @@ const ContentsListStyle = styled.ul`
         h3 {
           font-size: 12px;
         }
-        p {
+        p{
           font-size: 12px;
           margin-top: 3px;
         }

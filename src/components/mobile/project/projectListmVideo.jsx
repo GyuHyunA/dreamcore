@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { webDataList } from "../../../data/webData";
+import { videoDataList } from "../../../data/videoData";
 
 // 목록 더미 리스트
 
-const ProjectListmWeb = () => {
+const ProjectListmVideo = () => {
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);
 
@@ -25,26 +25,26 @@ const ProjectListmWeb = () => {
 
   return (
     <>
-      <ProjectListWebStyle>
+      <ProjectListmVideoStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
-          {webDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
+          {videoDataList.map((v) => {
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} />;
           })}
         </ContentsListStyle>
-      </ProjectListWebStyle>
+      </ProjectListmVideoStyle>
     </>
   );
 };
 
-export default ProjectListmWeb;
+export default ProjectListmVideo;
 
-const ListContainer = ({ title, name, link, poster }) => {
+const ListContainer = ({ id, title, name, poster }) => {
   return (
     <>
       <li>
-        <Link to={`${link}`}>
+        <Link to={`${id}`}>
           <div className="list-wrap">
-            <img src={`${process.env.PUBLIC_URL}/assets/webimg/${poster}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/videoimg/${poster}`} alt="" />
           </div>
           <div className="text-wrap">
             <h3 className="title">{title}</h3>
@@ -56,7 +56,7 @@ const ListContainer = ({ title, name, link, poster }) => {
   );
 };
 
-const ProjectListWebStyle = styled.section`
+const ProjectListmVideoStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   padding-bottom: 100px;
@@ -112,7 +112,7 @@ const ContentsListStyle = styled.ul`
         h3 {
           font-size: 12px;
         }
-        p {
+        p{
           font-size: 12px;
           margin-top: 3px;
         }
