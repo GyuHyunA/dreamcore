@@ -4,7 +4,8 @@ import { styled } from "styled-components";
 import { projectNav } from "../../../data/listData";
 
 const ProjectHome = () => {
-  let paramId = useLocation().pathname.slice(9, 18);
+  let paramId = useLocation().pathname.split("/")[2];
+  console.log(paramId);
 
   const [tar, setTar] = useState(0);
   const [btar, setbtar] = useState(false);

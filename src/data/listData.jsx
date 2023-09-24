@@ -31,7 +31,7 @@ export const professorList = [
   {
     id: 4,
     kname: "이태경",
-    field: "Mulitimedi Date Base Programming",
+    field: "Data Base Programming",
     ename: "Lee Tae-Kyong",
     email: "tklee@ulsan.ac.kr",
   },

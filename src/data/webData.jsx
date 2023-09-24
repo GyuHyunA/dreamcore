@@ -4,7 +4,7 @@ export const webDataList = [
     name: "김해강",
     title: "오행연구소",
     poster: "w_k_five.jpeg",
-    link: "https://5elements-drow.netlify.app",
+    link: "https://dr-kim.netlify.app/",
   },
   {
     id: 1,
