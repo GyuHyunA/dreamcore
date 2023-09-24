@@ -36,7 +36,7 @@ export const videoDataList = [
   },
   {
     id: 5,
-    title: "미정",
+    title: "FIND",
     name: "김재원",
     poster: "dummy.png",
     link: "",
@@ -162,7 +162,7 @@ export const videoDataList = [
   },
   {
     id: 23,
-    title: "미정",
+    title: "Summer vacation",
     name: "옥기정",
     poster: "dummy.png",
     link: "",

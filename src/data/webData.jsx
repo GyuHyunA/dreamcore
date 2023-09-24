@@ -58,7 +58,7 @@ export const webDataList = [
   {
     id: 8,
     name: "강시원",
-    title: "미정",
+    title: "DOONG",
     poster: "dummy.png",
     link: "",
   },
@@ -86,7 +86,7 @@ export const webDataList = [
   {
     id: 12,
     name: "최소윤",
-    title: "미정",
+    title: "OLD MEMORIES",
     poster: "dummy.png",
     link: "",
   },
