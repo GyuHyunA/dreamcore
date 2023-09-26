@@ -5,16 +5,17 @@ import { multiDataList } from "../../../data/multiData";
 
 const ProjectUserMulti = () => {
   const { productId } = useParams();
-  console.log(productId);
   let shortcut = multiDataList[productId];
+  console.log(shortcut);
   return (
     <ProjectUserMultiStyle>
       <div className="multi-contain">
         <h1 className="mu-title">{shortcut.title}</h1>
         <p className="mu-name">{shortcut.name}</p>
         <div className="mu-img-wrap">
-          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${shortcut.poster}`} alt="" />
-          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/dummy.png`} alt="" />
+          <img src={shortcut.pan1} alt="" />
+          <img src={shortcut.pan2} alt="" />
+          {/* <img src={`${process.env.PUBLIC_URL}/assets/mulimg/dummy.png`} alt="" /> */}
         </div>
       </div>
     </ProjectUserMultiStyle>

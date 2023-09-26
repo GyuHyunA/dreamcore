@@ -49,7 +49,7 @@ const ListContainer = ({ id, title, name, link, poster }) => {
               <h3 className="title">{title}</h3>
               <div className="filter"></div>
             </div>
-            <img src={`${process.env.PUBLIC_URL}/assets/videoimg/${poster}`} alt="" />
+            <img src={`${poster}`} alt="" />
           </div>
         </Link>
       </li>
