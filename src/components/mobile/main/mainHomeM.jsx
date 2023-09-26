@@ -43,8 +43,9 @@ const MainHomeM = () => {
       </MainHomeMStyle>
       <MainPosterStyle>
         <div className={`poster-wrap`}>
-          {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
-          <Image src="https://rcsvr.myds.me/agh/poster.png" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
+          <div className={`poster_img ${toCla ? "ia" : " "}`}>
+            <Image src="https://rcsvr.myds.me/agh/poster.png" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
+          </div>
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
               Dreamcore는 꿈과 현실 간의 연결을 의미합니다.
@@ -132,6 +133,8 @@ const MainPosterStyle = styled.section`
     .poster_img {
       width: 250px;
       height: 350px;
+      opacity: 0;
+      z-index: 3;
     }
     .ant-image-mask {
       background: rgba(0, 0, 0, 0);
@@ -139,12 +142,18 @@ const MainPosterStyle = styled.section`
         display: none;
       }
     }
+    .ia {
+      opacity: 1;
+      transition: 1s;
+    }
 
     .poster_text {
       width: 250px;
       display: inline-flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 50px;
+      opacity: 0;
       p {
         z-index: 0;
         font-size: 13px;
@@ -153,25 +162,30 @@ const MainPosterStyle = styled.section`
         }
       }
     }
+    .ta {
+      opacity: 1;
+      transition: 1s;
+      transition-delay: 1s;
+    }
   }
   /* 높이에 따른 해상도 차이 쿼리 */
   /* 안드로이드 */
   @media screen and (max-height: 810px) {
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
     .poster-wrap {
       .poster_img {
-        width: 200px;
-        height: 300px;
+        width: 270px;
+        height: 370px;
         object-fit: cover;
       }
     }
   }
   /* 아이폰 */
   @media screen and (max-height: 700px) {
-    height: calc(100vh - 120px);
+    /* height: calc(100vh - 120px); */
     .poster_img {
-      width: 100px;
-      height: 200px;
+      width: 150px;
+      height: 250px;
     }
   }
 `;
