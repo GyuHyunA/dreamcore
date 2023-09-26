@@ -12,8 +12,8 @@ const ProjectUsermMulti = () => {
         <h1 className="mu-title">{shortcut.title}</h1>
         <p className="mu-name">{shortcut.name}</p>
         <div className="mu-img-wrap">
-          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${shortcut.poster}`} alt="" />
-          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/dummy.png`} alt="" />
+          <img src={shortcut.pan1} alt="" />
+          <img src={shortcut.pan2} alt="" />
         </div>
       </div>
     </ProjectUsermMultiStyle>
@@ -48,7 +48,7 @@ const ProjectUsermMultiStyle = styled.div`
         width: 340px;
         height: 240px;
         &:nth-child(1) {
-          margin-bottom: 30px;
+          /* margin-bottom: 30px; */
         }
       }
     }

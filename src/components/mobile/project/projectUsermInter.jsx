@@ -16,7 +16,7 @@ const ProjectUsermInter = () => {
         </video> */}
       </div>
       <div className="dorok-contain">
-        <img src={`${process.env.PUBLIC_URL}/assets/videoimg/dummy.png`} alt="" className="do-dorok" />
+        <img src={shortcut.pan} alt="" className="do-dorok" />
       </div>
     </ProjectUsermInterStyle>
   );
@@ -57,7 +57,7 @@ const ProjectUsermInterStyle = styled.div`
     margin-bottom: 100px;
     .do-dorok {
       width: 320px;
-      height: 452px;
+      height: 800px;
     }
   }
 `;

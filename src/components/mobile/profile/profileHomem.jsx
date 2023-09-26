@@ -39,15 +39,15 @@ const ProfileHomeM = () => {
 export default ProfileHomeM;
 
 const ListContainer = ({ kname, ename, email, profile }) => {
-  let nameSplit = ename.split(" ");
+  // let nameSplit = ename.split(" ");
   // console.log(nameSplit);
-  let comName = nameSplit[0] + nameSplit[1];
+  // let comName = nameSplit[0] + nameSplit[1];
   // console.log(comName.toLowerCase());
   return (
     <li>
       <Link to={""} style={{ cursor: "auto" }}>
         <div>
-        <img src={`${process.env.PUBLIC_URL}/assets/profileimg/${comName}.${"jpg"}`} alt="" />
+        <img src={profile} alt="" />
         </div>
       </Link>
       <div className="name-box">

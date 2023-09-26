@@ -44,7 +44,7 @@ const ListContainer = ({ id, title, name, poster }) => {
       <li>
         <Link to={`${id}`}>
           <div className="list-wrap">
-            <img src={`${process.env.PUBLIC_URL}/assets/videoimg/${poster}`} alt="" />
+            <img src={poster} alt="" />
           </div>
           <div className="text-wrap">
             <h3 className="title">{title}</h3>
@@ -99,7 +99,7 @@ const ContentsListStyle = styled.ul`
       .list-wrap {
         width: 180px;
         height: 252px;
-        background-color: lightgray;
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.04);
         img {
           width: inherit;
           height: inherit;
