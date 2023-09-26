@@ -39,9 +39,9 @@ const ProfileHome = () => {
 export default ProfileHome;
 
 const ListContainer = ({ kname, ename, email, profile }) => {
-  let nameSplit = ename.split(" ");
+  // let nameSplit = ename.split(" ");
   // console.log(nameSplit);
-  let comName = nameSplit[0] + nameSplit[1];
+  // let comName = nameSplit[0] + nameSplit[1];
   // console.log(comName.toLowerCase());
 
   return (
@@ -54,7 +54,7 @@ const ListContainer = ({ kname, ename, email, profile }) => {
             <p className="ename">{ename}</p>
             <p className="email">{email}</p>
           </div>
-          <img src={`${process.env.PUBLIC_URL}/assets/profileimg/${comName}.${"jpg"}`} alt="" />
+          <img src={profile} alt="" />
         </div>
       </Link>
     </li>
