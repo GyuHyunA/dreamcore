@@ -102,13 +102,13 @@ const ContentsListStyle = styled.ul`
   }
 
   li {
-    width: 250px;
-    height: 300px;
+    width: 251px;
+    height: 322.535px;
     list-style: none;
     position: relative;
     a .list-wrap {
-      width: 250px;
-      height: 300px;
+      width: 251px;
+      height: 322.535px;
       /* background-color: lightgray; */
       .name-box {
         padding: 20px 0;
@@ -135,8 +135,8 @@ const ContentsListStyle = styled.ul`
         }
         .filter {
           position: absolute;
-          width: 250px;
-          height: 300px;
+          width: 251px;
+          height: 322.535px;
           bottom: 0;
           left: 0;
           background-color: #00000020;
