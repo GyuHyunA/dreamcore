@@ -101,7 +101,7 @@ const ContentsListStyle = styled.ul`
       .list-wrap {
         width: 250px;
         height: 350px;
-        /* background-color: lightgray; */
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.04);
         .tn-wrap {
           opacity: 0;
           position: absolute;
@@ -112,7 +112,9 @@ const ContentsListStyle = styled.ul`
             opacity: 1;
           }
           h3{
+            position: relative;
             font-size: 14px;
+            z-index: 11111;
             &:nth-child(1){
               margin-bottom: 5px;
             }
@@ -123,7 +125,7 @@ const ContentsListStyle = styled.ul`
             bottom: -20px;
             width: 250px;
             height: 350px;
-            background-color: #00000020;
+            background-color: rgba(255, 255, 255, 0.7);
           }
         }
         img {

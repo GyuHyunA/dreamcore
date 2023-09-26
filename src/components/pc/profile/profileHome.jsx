@@ -109,7 +109,7 @@ const ContentsListStyle = styled.ul`
     a .list-wrap {
       width: 251px;
       height: 322.535px;
-      /* background-color: lightgray; */
+      box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.04);
       .name-box {
         padding: 20px 0;
         padding-left: 15px;
@@ -125,11 +125,15 @@ const ContentsListStyle = styled.ul`
           font-size: 16px;
         }
         .kname {
+          position: relative;
+          z-index: 111;
           font-size: 16px;
           margin-bottom: 10px;
         }
         .ename,
         .email {
+          position: relative;
+          z-index: 111;
           font-family: "Pretendard-l";
           color: #3b3b3b;
         }
@@ -139,7 +143,7 @@ const ContentsListStyle = styled.ul`
           height: 322.535px;
           bottom: 0;
           left: 0;
-          background-color: #00000020;
+          background-color: rgba(255, 255, 255, 0.4);
         }
       }
       img {
