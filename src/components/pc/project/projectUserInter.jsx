@@ -12,12 +12,10 @@ const ProjectUserInter = () => {
       <div className="video-contain">
         <h1 className="vi-title">{shortcut.title}</h1>
         <p className="vi-name">{shortcut.name}</p>
-        {/* <video className="vi-video" controls>
-          <source src={`${process.env.PUBLIC_URL}/assets/video/${shortcut.link}`} />
-        </video> */}
+
       </div>
       <div className="dorok-contain">
-        <img src={`${process.env.PUBLIC_URL}/assets/videoimg/dummy.png`} alt="" className="do-dorok" />
+        <img src={shortcut.pan} alt="" className="do-dorok" />
       </div>
     </ProjectUserInterStyle>
   );
@@ -58,7 +56,7 @@ const ProjectUserInterStyle = styled.div`
     margin-bottom: 100px;
     .do-dorok{
       width: 520px;
-      height: 728px;
+      height: 1300px;
     }
   }
 `;

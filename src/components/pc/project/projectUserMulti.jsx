@@ -50,7 +50,7 @@ const ProjectUserMultiStyle = styled.div`
         width: 1192px;
         height: 842px;
         &:nth-child(1){
-          margin-bottom: 30px;
+          /* margin-bottom: 30px; */
         }
       }
     }

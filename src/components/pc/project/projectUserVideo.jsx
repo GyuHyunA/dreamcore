@@ -16,7 +16,7 @@ const ProjectUserVideo = () => {
         </video>
       </div>
       <div className="dorok-contain">
-        <img src={`${process.env.PUBLIC_URL}/assets/videoimg/dummy.png`} alt="" className="do-dorok" />
+        <img src={shortcut.poster} alt="" className="do-dorok" />
       </div>
     </ProjectUserVideoStyle>
   );
