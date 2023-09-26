@@ -46,8 +46,14 @@ const MainHomeM = () => {
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
           <Image src="https://rcsvr.myds.me/agh/poster.png" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
-            <p>드림코어는 몽환적임과 익숙하지만 현실과 동떨어진 괴리감으로 낯설음을 동시에 안겨주는 스타일을 의미하는 단어입니다</p>
-            <p>미디어 콘텐츠를 다루며 익숙한 환경에서 항상 새로운 시도를 하는 우리와 닮아 키워드로 선정하였습니다</p>
+            <p>
+              Dreamcore는 꿈과 현실 간의 연결을 의미합니다.
+              <br />
+              우리는 꿈을 현실로 만드는 과정을 보여주는 역할을 하며,
+              <br /> 디지털 콘텐츠를 통해 미래를 상상하고
+              <br /> 과거와 미래가 공존하는 공간으로 이끌어냅니다
+            </p>
+            <p>앞으로의 우리는 상상력의 한계를 넘어 새로운 세계를 창조하고, 아름다운 이야기를 공유하며, 다양한 경험을 선사할 것입니다</p>
           </div>
         </div>
       </MainPosterStyle>
