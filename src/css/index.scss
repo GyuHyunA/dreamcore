@@ -7,9 +7,18 @@
   src: url("./font/Pretendard-Bold.otf");
 }
 @font-face {
+  font-family: "Pretendard-sb";
+  src: url("./font/Pretendard-SemiBold.otf");
+}
+@font-face {
   font-family: "Pretendard-r";
   src: url("./font/Pretendard-Regular.otf");
 }
+@font-face {
+  font-family: "Pretendard-l";
+  src: url("./font/Pretendard-Light.otf");
+}
+
 
 * {
   margin: 0;
@@ -41,5 +50,37 @@ h3 {
 }
 
 .ant-image-preview-mask {
-  background-color: rgba(0, 0, 0, 0.8)!important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+// Drawer - pages/mobile/mainNavm
+.drawer {
+  padding: 0 15px;
+  padding-top: 30px;
+  .hamenu-drawer {
+    width: 100%;
+    list-style: none;
+    padding: 0 40px;
+    .link {
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+      border-bottom: 1px solid gray;
+      &:last-child{
+      border-bottom: none;
+      }
+      a {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+//App.jsx
+.abtest{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999;
 }
