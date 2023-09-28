@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { Image } from "antd";
+import { posterImg, mPosterImg } from "../../../data/imgDataList";
 
 const MainHomeM = () => {
   const [position, setPosition] = useState(0);
@@ -40,11 +41,12 @@ const MainHomeM = () => {
             <p>9AM - 6PM Tue - Fri</p>
           </div>
         </div>
+        <img src={mPosterImg} alt="" className="posterimg"/>
       </MainHomeMStyle>
       <MainPosterStyle>
         <div className={`poster-wrap`}>
           <div className={`poster_img ${toCla ? "ia" : " "}`}>
-            <Image src="https://rcsvr.myds.me/agh/poster.png" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
+            <Image src={posterImg} alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
           </div>
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
@@ -67,10 +69,10 @@ export default MainHomeM;
 const MainHomeMStyle = styled.section`
   width: 100vw;
   height: 100vh;
-  background-image: url("https://rcsvr.myds.me/agh/poster_main.png");
+  /* background-image: ${mPosterImg};
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
   .text-wrap {
     position: absolute;
     z-index: 2;
@@ -107,6 +109,12 @@ const MainHomeMStyle = styled.section`
         margin-right: 20px;
       }
     }
+  }
+  .posterimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   /* 높이에 따른 해상도 차이 쿼리 */
   /* 안드로이드 */

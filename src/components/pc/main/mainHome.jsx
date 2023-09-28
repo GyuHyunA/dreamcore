@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { Image } from "antd";
+import { posterImg } from "../../../data/imgDataList";
 
 const MainHome = () => {
   const [position, setPosition] = useState(0);
@@ -36,7 +37,7 @@ const MainHome = () => {
           <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
         </div>
         <div className="home-con">
-          <video src="https://rcsvr.myds.me/agh/ma_viv2.mp4" muted autoPlay loop></video>
+          <video src={`${process.env.PUBLIC_URL}/assets/video/ma_viv2.mp4`} muted autoPlay loop></video>
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
@@ -52,7 +53,7 @@ const MainHome = () => {
       <MainPosterStyle>
         <div className={`poster-wrap`}>
           {/* <div className={`poster_img ${toCla ? "ia" : " "}`}></div> */}
-          <Image src="https://rcsvr.myds.me/agh/poster.png" alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
+          <Image src={posterImg} alt="" className={`poster_img ${toCla ? "ia" : " "}`} />
           <div className={`poster_text ${toCla ? "ta" : " "}`}>
             <p>
               Dreamcore는 꿈과 현실 간의 연결을 의미합니다.
