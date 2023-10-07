@@ -37,7 +37,7 @@ const MainHome = () => {
           <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
         </div>
         <div className="home-con">
-          <video src={`${process.env.PUBLIC_URL}/assets/video/ma_viv2.mp4`} muted autoPlay loop></video>
+          <video src={`${process.env.PUBLIC_URL}/assets/video/ma_viv2.mp4`} preload="auto" muted autoPlay loop></video>
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
