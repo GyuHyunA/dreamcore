@@ -42,7 +42,7 @@ const ListContainer = ({ title, name, link, poster }) => {
   return (
     <>
       <li>
-        <Link to={link}>
+        <Link to={link} target="_blank">
           <div className="list-wrap">
             <div className="tn-wrap">
               <h3 className="name">{name}</h3>
