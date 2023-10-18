@@ -46,7 +46,7 @@ const MainHome = () => {
           </div>
           <div className="time">
             <p>OPEN. 5PM - 6PM Mon</p>
-            <p>9AM - 6PM Tue - Fri</p>
+            <p>9AM - 6PM Tue - Sun</p>
           </div>
         </div>
       </MainHomeStyle>
