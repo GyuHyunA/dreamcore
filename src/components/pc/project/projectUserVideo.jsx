@@ -1,10 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { videoDataList } from "../../../data/videoData";
 
 const ProjectUserVideo = () => {
   const { productId } = useParams();
+  let paramId = useLocation().pathname.split("/")[3];
   let shortcut = videoDataList[productId];
   return (
     <ProjectUserVideoStyle>
@@ -16,7 +17,9 @@ const ProjectUserVideo = () => {
         </video>
       </div>
       <div className="dorok-contain">
-        <img src={`${process.env.PUBLIC_URL}/assets/videoimg/mo_p_${shortcut.id}.webp`} alt="" className="do-dorok" />
+        {paramId === "0" ? <img src={`${process.env.PUBLIC_URL}/assets/videoimg/mo_p2_${shortcut.id}.webp`} alt="" className="do-dorok" /> : (
+          <img src={`${process.env.PUBLIC_URL}/assets/videoimg/mo_p_${shortcut.id}.webp`} alt="" className="do-dorok" />
+        )}
       </div>
     </ProjectUserVideoStyle>
   );
@@ -54,7 +57,7 @@ const ProjectUserVideoStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    .do-dorok{
+    .do-dorok {
       width: 520px;
       height: 728px;
     }
