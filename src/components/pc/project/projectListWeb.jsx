@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 // import { dummyList } from "../../../dummy/dummylist";
 import { webDataList } from "../../../data/webData";
@@ -28,7 +28,7 @@ const ProjectListWeb = () => {
       <ProjectListWebStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {webDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
           })}
         </ContentsListStyle>
       </ProjectListWebStyle>
@@ -38,7 +38,7 @@ const ProjectListWeb = () => {
 
 export default ProjectListWeb;
 
-const ListContainer = ({ title, name, link, poster }) => {
+const ListContainer = ({ id, title, name, link }) => {
   return (
     <>
       <li>
@@ -49,7 +49,7 @@ const ListContainer = ({ title, name, link, poster }) => {
               <h3 className="title">{title}</h3>
               <div className="filter"></div>
             </div>
-            <img src={`${poster}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/webimg/web_p_${id}.webp`} alt="" />
           </div>
         </Link>
       </li>
@@ -109,7 +109,7 @@ const ContentsListStyle = styled.ul`
           bottom: 20px;
           left: 20px;
           transition: 0.5s;
-          
+
           &:hover {
             opacity: 1;
           }
