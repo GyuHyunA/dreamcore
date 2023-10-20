@@ -38,7 +38,7 @@ const ProjectListMulti = () => {
 
 export default ProjectListMulti;
 
-const ListContainer = ({ id, title, name, poster, pan1, pan2 }) => {
+const ListContainer = ({ id, title, name, poster }) => {
   return (
     <>
       <li>
@@ -49,7 +49,7 @@ const ListContainer = ({ id, title, name, poster, pan1, pan2 }) => {
               <h3 className="title">{title}</h3>
               <div className="filter"></div>
             </div>
-            <img src={`${poster}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${poster}`} alt="" />
           </div>
         </Link>
       </li>
