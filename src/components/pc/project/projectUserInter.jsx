@@ -15,7 +15,7 @@ const ProjectUserInter = () => {
 
       </div>
       <div className="dorok-contain">
-        <img src={shortcut.pan} alt="" className="do-dorok" />
+        <img src={`${process.env.PUBLIC_URL}/assets/interimg/inter_b_${shortcut.id}.webp`} alt="" className="do-dorok" />
       </div>
     </ProjectUserInterStyle>
   );
