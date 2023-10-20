@@ -49,7 +49,7 @@ const ListContainer = ({ id, title, name, poster }) => {
               <h3 className="title">{title}</h3>
               <div className="filter"></div>
             </div>
-            <img src={`${process.env.PUBLIC_URL}/assets/mulimg/${poster}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_t_${id}.webp`} alt="" />
           </div>
         </Link>
       </li>
