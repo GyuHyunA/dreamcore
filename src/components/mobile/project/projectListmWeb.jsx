@@ -28,7 +28,7 @@ const ProjectListmWeb = () => {
       <ProjectListWebStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {webDataList.map((v) => {
-            return <ListContainer key={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} link={v.link} poster={v.poster} />;
           })}
         </ContentsListStyle>
       </ProjectListWebStyle>
@@ -38,13 +38,13 @@ const ProjectListmWeb = () => {
 
 export default ProjectListmWeb;
 
-const ListContainer = ({ title, name, link, poster }) => {
+const ListContainer = ({ id, title, name, link, poster }) => {
   return (
     <>
       <li>
         <Link to={`${link}`} target="_blank">
           <div className="list-wrap">
-            <img src={poster} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/webimg/web_p_${id}.webp`} alt="" />
           </div>
           <div className="text-wrap">
             <h3 className="title">{title}</h3>

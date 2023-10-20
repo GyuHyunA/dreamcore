@@ -44,7 +44,7 @@ const ListContainer = ({ id, title, name, poster }) => {
       <li>
         <Link to={`${id}`}>
           <div className="list-wrap">
-            <img src={poster} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/interimg/inter_p_${id}.webp`} alt="" />
           </div>
           <div className="text-wrap">
             <h3 className="title">{title}</h3>

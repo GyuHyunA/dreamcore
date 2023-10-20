@@ -12,8 +12,8 @@ const ProjectUsermMulti = () => {
         <h1 className="mu-title">{shortcut.title}</h1>
         <p className="mu-name">{shortcut.name}</p>
         <div className="mu-img-wrap">
-          <img src={shortcut.pan1} alt="" />
-          <img src={shortcut.pan2} alt="" />
+          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_p1_${shortcut.id}.webp`} alt="" />
+          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_p2_${shortcut.id}.webp`} alt="" />
         </div>
       </div>
     </ProjectUsermMultiStyle>
