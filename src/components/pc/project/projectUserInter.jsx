@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { interDataList } from "../../../data/interData";
 
 const ProjectUserInter = () => {
   const { productId } = useParams();
-  console.log(productId);
   let shortcut = interDataList[productId];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
   return (
     <ProjectUserInterStyle>
       <div className="video-contain">

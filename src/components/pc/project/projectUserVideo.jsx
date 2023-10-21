@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { videoDataList } from "../../../data/videoData";
@@ -7,6 +7,12 @@ const ProjectUserVideo = () => {
   const { productId } = useParams();
   let paramId = useLocation().pathname.split("/")[3];
   let shortcut = videoDataList[productId];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
+
   return (
     <ProjectUserVideoStyle>
       <div className="video-contain">
@@ -17,7 +23,9 @@ const ProjectUserVideo = () => {
         </video>
       </div>
       <div className="dorok-contain">
-        {paramId === "0" ? <img src={`${process.env.PUBLIC_URL}/assets/videoimg/mo_p2_${shortcut.id}.webp`} alt="" className="do-dorok" /> : (
+        {paramId === "0" ? (
+          <img src={`${process.env.PUBLIC_URL}/assets/videoimg/mo_p2_${shortcut.id}.webp`} alt="" className="do-dorok" />
+        ) : (
           <img src={`${process.env.PUBLIC_URL}/assets/videoimg/mo_p_${shortcut.id}.webp`} alt="" className="do-dorok" />
         )}
       </div>

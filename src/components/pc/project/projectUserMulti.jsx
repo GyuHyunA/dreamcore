@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { multiDataList } from "../../../data/multiData";
@@ -6,7 +6,11 @@ import { multiDataList } from "../../../data/multiData";
 const ProjectUserMulti = () => {
   const { productId } = useParams();
   let shortcut = multiDataList[productId];
-  console.log(shortcut.pan1);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    return () => {};
+  }, []);
+
   return (
     <ProjectUserMultiStyle>
       <div className="multi-contain">
