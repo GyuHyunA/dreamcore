@@ -1,15 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { multiDataList } from "../../../data/multiData";
 
+
 const ProjectUserMulti = () => {
   const { productId } = useParams();
   let shortcut = multiDataList[productId];
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    return () => {};
-  }, []);
 
   return (
     <ProjectUserMultiStyle>
@@ -43,17 +40,17 @@ const ProjectUserMultiStyle = styled.div`
       font-size: 18px;
       margin-bottom: 80px;
     }
-    .mu-img-wrap{
+    .mu-img-wrap {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         width: 1192px;
         height: 842px;
-        &:nth-child(1){
+        &:nth-child(1) {
           /* margin-bottom: 30px; */
         }
       }

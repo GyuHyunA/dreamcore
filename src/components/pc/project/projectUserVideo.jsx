@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { videoDataList } from "../../../data/videoData";
@@ -7,11 +7,6 @@ const ProjectUserVideo = () => {
   const { productId } = useParams();
   let paramId = useLocation().pathname.split("/")[3];
   let shortcut = videoDataList[productId];
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    return () => {};
-  }, []);
 
   return (
     <ProjectUserVideoStyle>

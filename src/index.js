@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./css/index.scss";
 import App from "./pages/App";
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./hook/scrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>
