@@ -35,27 +35,21 @@ export const interDataList = [
     title: "유어오븐",
     name: "박가영 박유주 성수윤",
   },
-  //조롱박형제
-  {
-    id: 6,
-    title: "조롱박형제",
-    name: "조자호",
-  },
   // REDI
   {
-    id: 7,
+    id: 6,
     title: "REDI",
     name: "강시원 박진령",
   },
   // selfart
   {
-    id: 8,
+    id: 7,
     title: "selfart",
     name: "김정엽 신준헌 옥기정",
   },
   // 툰버스
   {
-    id: 9,
+    id: 8,
     title: "툰버스",
     name: "이한별",
   },

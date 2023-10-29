@@ -87,4 +87,34 @@ const ProjectUserVideoStyle = styled.div`
       height: 728px;
     }
   }
+  @media screen and (max-width: 1280px) {
+    .video-contain {
+      height: 90vh;
+      .vi-video {
+        width: 960px;
+        height: 540px;
+        .vi-frame {
+          width: inherit;
+          height: inherit;
+          iframe {
+            width: inherit;
+            height: inherit;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-height: 800px) {
+    .video-contain {
+      margin-bottom: 150px;
+    }
+    .dorok-contain {
+      margin-bottom: 90px;
+    .do-dorok {
+      width: 520px;
+      height: 728px;
+    }
+  }
+  }
+  
 `;
