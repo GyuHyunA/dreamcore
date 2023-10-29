@@ -28,7 +28,7 @@ const ProjectListMulti = () => {
       <ProjectListMultiStyle>
         <ContentsListStyle className={`${btar ? "act" : ""}`}>
           {multiDataList.map((v) => {
-            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} pan1={v.pan1} pan2={v.pan2}/>;
+            return <ListContainer key={v.id} id={v.id} title={v.title} name={v.name} poster={v.poster} pan1={v.pan1} pan2={v.pan2} />;
           })}
         </ContentsListStyle>
       </ProjectListMultiStyle>
@@ -138,16 +138,42 @@ const ContentsListStyle = styled.ul`
       margin-top: 10px;
     }
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1280px) {
     grid-template-columns: 250px 250px 250px;
+    gap: 50px;
     li {
       width: 250px;
       height: 179px;
-      a {
-        div {
-          width: 250px;
-          height: 179px;
+      a .list-wrap {
+        width: 250px;
+        height: 179px;
+        .tn-wrap {
+          h3 {
+            position: relative;
+            z-index: 111;
+            font-size: 14px;
+            &:nth-child(1) {
+              margin-bottom: 5px;
+            }
+          }
+          .filter {
+            position: absolute;
+            left: -20px;
+            bottom: -20px;
+            width: 250px;
+            height: 179px;
+            background-color: rgba(255, 255, 255, 0.7);
+          }
         }
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      p {
+        margin-top: 10px;
       }
     }
   }

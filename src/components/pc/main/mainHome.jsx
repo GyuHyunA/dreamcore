@@ -219,6 +219,10 @@ const MainPosterStyle = styled.section`
       transition-delay: 1s;
     }
   }
+  @media screen and (max-width: 1280px) {
+    height: initial;
+  }
+
   @media screen and (max-width: 1480px) {
     .poster-wrap {
       .poster_img {
@@ -245,35 +249,3 @@ const MainPosterStyle = styled.section`
     }
   }
 `;
-
-// const AudioStyle = styled.audio`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 99999999999999;
-// `;
-// const MainTrailerStyle = styled.section`
-//   width: 100vw;
-//   height: 100vh;
-//   padding-top: 100px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   h1 {
-//     text-align: center;
-//     font-size: 28px;
-//     margin-bottom: 80px;
-//   }
-//   .trailer-box {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//   }
-//   .trailer-box iframe {
-//     width: 960px;
-//     height: 540px;
-//     margin-bottom: 10px;
-//   }
-// `;

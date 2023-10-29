@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { multiDataList } from "../../../data/multiData";
 
-
 const ProjectUserMulti = () => {
   const { productId } = useParams();
   let shortcut = multiDataList[productId];
@@ -16,7 +15,6 @@ const ProjectUserMulti = () => {
         <div className="mu-img-wrap">
           <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_p1_${shortcut.id}.webp`} alt="" />
           <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_p2_${shortcut.id}.webp`} alt="" />
-          {/* <img src={`${process.env.PUBLIC_URL}/assets/mulimg/dummy.png`} alt="" /> */}
         </div>
       </div>
     </ProjectUserMultiStyle>
@@ -52,6 +50,20 @@ const ProjectUserMultiStyle = styled.div`
         height: 842px;
         &:nth-child(1) {
           /* margin-bottom: 30px; */
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .multi-contain {
+      .mu-img-wrap {
+        img {
+          width: 842.5px;
+          height: 596px;
+          &:nth-child(1) {
+            /* margin-bottom: 30px; */
+          }
         }
       }
     }
