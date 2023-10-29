@@ -49,7 +49,7 @@ const ListContainer = ({ id, title, name, poster }) => {
               <h3 className="title">{title}</h3>
               <div className="filter"></div>
             </div>
-            <img src={`${poster}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/assets/interimg/inter_p_${id}.webp`} alt="" />
           </div>
         </Link>
       </li>
@@ -140,14 +140,40 @@ const ContentsListStyle = styled.ul`
   }
   @media screen and (max-width: 1100px) {
     grid-template-columns: 250px 250px 250px;
+    gap: 50px;
     li {
       width: 250px;
       height: 179px;
-      a {
-        div {
-          width: 250px;
-          height: 179px;
+      a .list-wrap {
+        width: 250px;
+        height: 179px;
+        .tn-wrap {
+          h3 {
+            position: relative;
+            z-index: 111;
+            font-size: 14px;
+            &:nth-child(1) {
+              margin-bottom: 5px;
+            }
+          }
+          .filter {
+            position: absolute;
+            left: -20px;
+            bottom: -20px;
+            width: 250px;
+            height: 179px;
+            background-color: rgba(255, 255, 255, 0.7);
+          }
         }
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      p {
+        margin-top: 10px;
       }
     }
   }

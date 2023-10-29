@@ -37,8 +37,8 @@ const MainHomeM = () => {
             <p>11.05</p>
           </div>
           <div className="time">
-            <p>OPEN. 5PM - 6PM Mon</p>
-            <p>9AM - 6PM Tue - Fri</p>
+            <p>OPEN. 6PM - 7PM Mon</p>
+            <p>9AM - 6PM Tue - Sun</p>
           </div>
         </div>
         <img src={mPosterImg} alt="" className="posterimg"/>

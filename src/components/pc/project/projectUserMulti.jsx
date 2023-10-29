@@ -6,16 +6,15 @@ import { multiDataList } from "../../../data/multiData";
 const ProjectUserMulti = () => {
   const { productId } = useParams();
   let shortcut = multiDataList[productId];
-  console.log(shortcut);
+
   return (
     <ProjectUserMultiStyle>
       <div className="multi-contain">
         <h1 className="mu-title">{shortcut.title}</h1>
         <p className="mu-name">{shortcut.name}</p>
         <div className="mu-img-wrap">
-          <img src={shortcut.pan1} alt="" />
-          <img src={shortcut.pan2} alt="" />
-          {/* <img src={`${process.env.PUBLIC_URL}/assets/mulimg/dummy.png`} alt="" /> */}
+          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_p1_${shortcut.id}.webp`} alt="" />
+          <img src={`${process.env.PUBLIC_URL}/assets/mulimg/mul_p2_${shortcut.id}.webp`} alt="" />
         </div>
       </div>
     </ProjectUserMultiStyle>
@@ -39,18 +38,32 @@ const ProjectUserMultiStyle = styled.div`
       font-size: 18px;
       margin-bottom: 80px;
     }
-    .mu-img-wrap{
+    .mu-img-wrap {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         width: 1192px;
         height: 842px;
-        &:nth-child(1){
+        &:nth-child(1) {
           /* margin-bottom: 30px; */
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .multi-contain {
+      .mu-img-wrap {
+        img {
+          width: 842.5px;
+          height: 596px;
+          &:nth-child(1) {
+            /* margin-bottom: 30px; */
+          }
         }
       }
     }

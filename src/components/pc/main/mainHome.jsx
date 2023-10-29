@@ -37,7 +37,9 @@ const MainHome = () => {
           <p className="main-subtext">울산대학교 디지털콘텐츠디자인 24회 졸업전시회</p>
         </div>
         <div className="home-con">
-          <video src={`${process.env.PUBLIC_URL}/assets/video/ma_viv2.mp4`} preload="auto" muted autoPlay loop></video>
+          <video poster={`${process.env.PUBLIC_URL}/assets/video/ma_viv2_p.png`}  preload="auto" muted autoPlay loop>
+            <source src={`${process.env.PUBLIC_URL}/assets/video/ma_viv2.mp4`}/>
+          </video>
         </div>
         <div className="text-wrap tw-down">
           <div className="date">
@@ -45,8 +47,8 @@ const MainHome = () => {
             <p>11.05</p>
           </div>
           <div className="time">
-            <p>OPEN. 5PM - 6PM Mon</p>
-            <p>9AM - 6PM Tue - Fri</p>
+            <p>OPEN. 6PM - 7PM Mon</p>
+            <p>9AM - 6PM Tue - Sun</p>
           </div>
         </div>
       </MainHomeStyle>
@@ -217,6 +219,10 @@ const MainPosterStyle = styled.section`
       transition-delay: 1s;
     }
   }
+  @media screen and (max-width: 1280px) {
+    height: initial;
+  }
+
   @media screen and (max-width: 1480px) {
     .poster-wrap {
       .poster_img {
@@ -243,35 +249,3 @@ const MainPosterStyle = styled.section`
     }
   }
 `;
-
-// const AudioStyle = styled.audio`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 99999999999999;
-// `;
-// const MainTrailerStyle = styled.section`
-//   width: 100vw;
-//   height: 100vh;
-//   padding-top: 100px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   h1 {
-//     text-align: center;
-//     font-size: 28px;
-//     margin-bottom: 80px;
-//   }
-//   .trailer-box {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//   }
-//   .trailer-box iframe {
-//     width: 960px;
-//     height: 540px;
-//     margin-bottom: 10px;
-//   }
-// `;
