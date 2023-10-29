@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { videoDataList } from "../../../data/videoData";
+import YouTube from "react-youtube";
 
 const ProjectUsermVideo = () => {
   const { productId } = useParams();
@@ -12,9 +13,21 @@ const ProjectUsermVideo = () => {
       <div className="video-contain">
         <h1 className="vi-title">{shortcut.title}</h1>
         <p className="vi-name">{shortcut.name}</p>
-        <video className="vi-video" controls preload="auto">
+        <div className="vi-video">
+          <YouTube
+            className="vi-frame"
+            videoId={shortcut.link} //동영상 주소
+            opts={{
+              playerVars: {
+                modestbranding: 1, //컨트롤 바에 유튜브 로고 표시 여부
+                loop: 1, //반복 재생
+              },
+            }}
+          />
+        </div>
+        {/* <video className="vi-video" controls preload="auto">
           <source src={`${process.env.PUBLIC_URL}/assets/video/${shortcut.link}`} />
-        </video>
+        </video> */}
       </div>
       <div className="dorok-contain">
         {paramId === "0" ? (
@@ -38,7 +51,9 @@ const ProjectUsermVideoStyle = styled.div`
     width: 100%;
     text-align: center;
     margin-bottom: 100px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .vi-title {
       font-size: 20px;
       margin-bottom: 30px;
@@ -50,10 +65,15 @@ const ProjectUsermVideoStyle = styled.div`
     .vi-video {
       width: 384px;
       height: 216px;
-      background-color: #eaeaea;
-      source {
+      display: flex;
+      justify-content: center;
+      .vi-frame {
         width: inherit;
         height: inherit;
+        iframe {
+          width: inherit;
+          height: inherit;
+        }
       }
     }
   }
