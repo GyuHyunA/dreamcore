@@ -27,7 +27,7 @@ export const multiDataList = [
   {
     id: 5,
     title: "팬썸",
-    name: "노준희 송영재",
+    name: "노준희",
   },
   {
     id: 6,
