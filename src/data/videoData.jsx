@@ -47,12 +47,12 @@ export const videoDataList = [
     name: "백은지",
     link: "PmFGSdblcDs",
   },
-  {
-    id: 8,
-    title: "무제(無題)",
-    name: "송영재",
-    link: "HXyjxNJmf_k",
-  },
+  // {
+  //   id: 8,
+  //   title: "무제(無題)",
+  //   name: "송영재",
+  //   link: "HXyjxNJmf_k",
+  // },
   {
     id: 9,
     title: "Raid",

@@ -21,7 +21,7 @@ export const interDataList = [
   {
     id: 3,
     title: "둥둥",
-    name: "김예찬 노준희 송영재",
+    name: "김예찬 노준희",
   },
   // PETMEEING
   {
